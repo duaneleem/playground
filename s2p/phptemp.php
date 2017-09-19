@@ -52,7 +52,7 @@
 
     // Custom CSS
     wp_enqueue_style("css-leemtek-custom", "https://d1qlu92qlflogk.cloudfront.net/template-durendal/css/custom.css");
-    wp_enqueue_style("css-main", "/assets/css/main.css");
+    wp_enqueue_style("css-main", get_template_directory_uri() . "/assets/css/main.css");
     
 	
     /* ======================================================
