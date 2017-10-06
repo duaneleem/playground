@@ -1,3 +1,6 @@
+# OpenProject 7 Configuration
+# Source: https://www.openproject.org/docker/
+
 # This should work on Mac/Linux.
 docker run \
   --name openproject7 \
