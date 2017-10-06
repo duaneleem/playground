@@ -1,0 +1,13 @@
+docker run \
+  --name openproject7 \
+  -p 8181:80 \
+  -v '/localpath/openproject/db-data':/var/lib/postgresql/9.4/main \
+  -v '/localpath/openproject/data':/var/db/openproject \
+  -e SECRET_KEY_BASE='changeme' \
+  openproject/community:7
+
+docker run \
+  --name openproject7 \
+  -p 8181:80 \
+  -e SECRET_KEY_BASE='changeme' \
+  openproject/community:7
