@@ -1,5 +1,6 @@
 /**
- * Class representing a point.
+ * Class representing a point. Check out more examples from the following sources:
+ * https://www.tutorialspoint.com/java/java_documentation.htm
  * @author Duane Leem
  * @version 1.0
  * @since 2017-10-07
@@ -7,8 +8,8 @@
 class Point {
     /**
      * Create a point.
-     * @param {number} x - The x value.
-     * @param {number} y - The y value.
+     * @param {number} x The x value.
+     * @param {number} y The y value.
      */
     constructor(x, y) {
         // ...
