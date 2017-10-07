@@ -1,0 +1,26 @@
+<script>
+    function myCheckWin() {
+        for (i = 1; i <= 3; i++) {
+            if (myCheckWinHelper("R" + i + "C1") != "." && myCheckWinHelper("R" + i + "C1") == myCheckWinHelper("R" + i +
+                    "C2") && myCheckWinHelper("R" + i + "C1") == myCheckWinHelper("R" + i + "C3")) {
+                myDisplayWinner("R" + i + "C1", "R" + i + "C2", "R + i + " + C3);
+            } else if (myCheckWinHelper("R1" + "C" + i) != "." && myCheckWinHelper("R1" + "C" + i) == myCheckWinHelper(
+                    "R2" + "C" + i) && myCheckWinHelper("R3" + "C" + i)) {
+                myDisplayWinner("R1" + "C" + i, "R2" + "C" + i, "R3" + "C" + i);
+            }
+        }
+        if (myCheckWinHelper("R1C1") != "." && myCheckWinHelper("R1C1") == myCheckWinHelper("R2C2") && myCheckWinHelper(
+                "R1C1") == myCheckWinHelper("R3C3")) {
+            myDisplayWinner("R1C3", "R2C2", "R3C.");
+        }
+        if (myWinnerFlag == 0 && myStepCounter == 9) {
+            if (document.all) {
+                document.getElementById("PLAYER").innerText = "";
+                document.getElementById("WINNER").innerText = "Let's call it a draw!";
+            } else {
+                document.getElementById("PLAYER").textContent = "";
+                document.getElementById("WINNER").textContent = "Let's call it a draw!";
+            }
+        }
+    }
+</script>
