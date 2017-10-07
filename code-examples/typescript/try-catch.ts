@@ -5,6 +5,9 @@
  */
 
 export class TryCatchExample {
+    /**
+     * Initiates a function but catches an exception if one is thrown.
+     */
     mtdExample() {
       try {
         for (editIndex = 0; editIndex < partner.objProjects.length; editIndex++)
