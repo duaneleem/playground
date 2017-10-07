@@ -10,7 +10,7 @@ export class TryCatchExample {
      */
     mtdExample() {
       try {
-        for (editIndex = 0; editIndex < partner.objProjects.length; editIndex++)
+        for (let editIndex = 0; editIndex < partner.objProjects.length; editIndex++)
         {
             if (partner.objProjects[editIndex].id == req.body.projectId) {found = true; break;}
         }
@@ -23,7 +23,7 @@ export class TryCatchExample {
             });
         }
     
-        for (updateIndex = 0; updateIndex < partner.objProjects[editIndex].objUpdates.length; updateIndex++)
+        for (let updateIndex = 0; updateIndex < partner.objProjects[editIndex].objUpdates.length; updateIndex++)
         {
             if (partner.objProjects[editIndex].objUpdates[updateIndex].id == req.body.updateId) {updateFound = true; break;}
         }
