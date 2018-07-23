@@ -1,0 +1,30 @@
+function longestConsec(strarr, k) {
+  // First sort by largest.
+  strarr.sort(function(a, b) {
+    return b.length - a.length;
+  });
+  
+  // If k is greater than strarr, return empty string.
+  if (k > strarr.length) {
+    return "";
+  } else {
+    // Output results by k.
+    let results = [];
+    for (let i = 0; i < k; i++) {
+      results.push(strarr[i]);
+    } // for()
+    
+    // Sort alphabetically.
+    results.sort(function(a, b) {
+      return b.length - a.length;
+    });
+    
+    // Create a string out of the results.
+    let answer = "";
+    for (word in results) {
+      answer += results[word];
+    } // for (word in results)
+    
+    return answer;
+  }
+} // longestConsec(strarr, k)
