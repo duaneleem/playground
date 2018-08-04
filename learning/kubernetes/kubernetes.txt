@@ -1,3 +1,17 @@
+## K8S Overview
+- 1.0 Released in July 2015
+- Abbreviated as "k8s" - gree for "helmsman" or "pilot"
+- Kubernetes runs anywhere Linux does.
+
+## Deploying Kubernetes
+- Local dev or evaluation version: minikube
+- Deployment: cloud provider or bare metal.
+- On AWS, we can use kops.
+- GCP has high-level support for k8s through Google Container Engine (GKE) offering.
+  - No additional fee for less than 5 nodes but still responsible for VMs.
+  - Automates cluster setup, maintenance, monitoring, scaling, health checking.
+
+
 ## Container Orchestration
 Kubernetes
 Docker Swarm
