@@ -1,3 +1,6 @@
 /node_modules
 /learning/react-complete-guide/node_modules
 /learning/react-playlist/node_modules
+
+# Contains random files.
+/other
