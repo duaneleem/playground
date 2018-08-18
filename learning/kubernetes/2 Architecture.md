@@ -52,3 +52,11 @@
   - Install via bash: kubectl create -f https://raw.githubusercontent.com/kubernetes/dashboard/master/src/deploy/recommended/kubernetes-dashboard.yaml
   - Run: kubectl proxy
   - Access: http://localhost:8001/api/v1/namespaces/kube-system/services/https:kubernetes-dashboard:/proxy/#!/overview?namespace=default
+
+## Exercise: Deploying & Scaling Kubernetes
+- MongoDB port 27017
+- Create MongoDB Server
+  - kubectl run mongo-exercise-1 --image=mongo --port=27017
+  - kubectl scale --replicas=4 deployment/mongo-exercise-1
+- Describe Deployment
+  - kubectl describe deployments mongo-exercise-1
