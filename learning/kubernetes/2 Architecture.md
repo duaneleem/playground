@@ -53,10 +53,22 @@
   - Run: kubectl proxy
   - Access: http://localhost:8001/api/v1/namespaces/kube-system/services/https:kubernetes-dashboard:/proxy/#!/overview?namespace=default
 
-## Exercise: Deploying & Scaling Kubernetes
+### Exercise: Deploying & Scaling Kubernetes
 - MongoDB port 27017
 - Create MongoDB Server
   - kubectl run mongo-exercise-1 --image=mongo --port=27017
   - kubectl scale --replicas=4 deployment/mongo-exercise-1
 - Describe Deployment
   - kubectl describe deployments mongo-exercise-1
+- Open up port on LoadBalancer
+  - kubectl expose deployment mongo-exercise-1 --type=LoadBalancer --name=mongo-exercise-1
+- Find out info about the new service.
+  - kubectl get services
+  - kubectl describe services mongo-exercise-1
+
+Example for exposing IP: https://kubernetes.io/docs/tutorials/stateless-application/expose-external-ip-address/
+
+### DNS & Service Discovery
+- Kubernetes has a specific & consistent nomenclature for deciding what this DNS name is: <my-service-name>.<my-namespace>.svc.cluster.local
+- 
+
