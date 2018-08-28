@@ -70,5 +70,7 @@ Example for exposing IP: https://kubernetes.io/docs/tutorials/stateless-applicat
 
 ### DNS & Service Discovery
 - Kubernetes has a specific & consistent nomenclature for deciding what this DNS name is: <my-service-name>.<my-namespace>.svc.cluster.local
-- 
+- Automatic
+  - Convention over Configuration
+  - 
 
