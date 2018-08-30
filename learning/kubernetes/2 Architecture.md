@@ -78,3 +78,4 @@ Example for exposing IP: https://kubernetes.io/docs/tutorials/stateless-applicat
   - kubectl apply -f mysql-deployment.yaml
   - kubectl apply -f wordpress-deployment.yaml
   - minikube service wordpress --url
+
