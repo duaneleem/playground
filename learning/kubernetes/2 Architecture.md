@@ -73,4 +73,8 @@ Example for exposing IP: https://kubernetes.io/docs/tutorials/stateless-applicat
 - Automatic
   - Convention over Configuration
   - 
-
+- Demo Commands
+  - kubectl create -f local-volumes.yaml
+  - kubectl apply -f mysql-deployment.yaml
+  - kubectl apply -f wordpress-deployment.yaml
+  - minikube service wordpress --url
