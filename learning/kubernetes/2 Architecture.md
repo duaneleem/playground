@@ -99,4 +99,13 @@ Example for exposing IP: https://kubernetes.io/docs/tutorials/stateless-applicat
     - Grafana Dashboard: minikube addons open heapster
 
 ### Namespaces
-- 
+- Namespaces create multiple virtual clusters on the same physical clusters, these virtual clusters are called namespaces.
+- Namespaces provide separation, when you start to need them, start using them.
+- Commands for namespaces
+  - kubectl create namespace <namespace name>
+  - kubectl get namespace
+  - kubectl create namespace cpu-limited-tomcat
+  - kubectl create -f ./cpu-limits.yaml —namespace=cpu-limited-tomcat (from the GitHub repo directory for this lecture)
+  - kubectl apply -f ./tomcat-deployment.yaml —namespace=cpu-limited-tomcat (from the GitHub repo directory for this lecture)
+  - kubectl describe deployment tomcat-deployment —namespace=cpu-limited-tomcat
+
