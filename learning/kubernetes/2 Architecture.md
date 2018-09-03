@@ -109,3 +109,17 @@ Example for exposing IP: https://kubernetes.io/docs/tutorials/stateless-applicat
   - kubectl apply -f ./tomcat-deployment.yaml —namespace=cpu-limited-tomcat (from the GitHub repo directory for this lecture)
   - kubectl describe deployment tomcat-deployment —namespace=cpu-limited-tomcat
 
+### Auto-Scaling
+- Horizontal pod auto-scaler (HPA).
+- Command
+  - 1st Terminal
+    // since the latest minikube doesn't enable metrics-server by default
+    - minikube addons enable metrics-server  
+    - kubectl apply -f ./wordpress-deployment.yaml
+    - kubectl autoscale deployment wordpress --cpu-percent=50 --min=1 --max=5
+  - In the other terminal
+    - kubectl run -i --tty load-generator --image=busybox /bin/sh
+    - while true; do wget -q -O- http://wordpress.default.svc.cluster.local; done
+  - Back to 1st terminal.
+    - kubectl get hpa
+  
