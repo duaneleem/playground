@@ -87,3 +87,16 @@ Example for exposing IP: https://kubernetes.io/docs/tutorials/stateless-applicat
   - kubectl get secret
 - Using secrets
   - As an environmental variable.
+
+### Usage & Resource Monitoring
+- Open Source: Heapster, InfluxDB, Grafana
+- Heapster
+  - Kubernetes' container cluster monitoring solution.
+  - Maintained by CNCF
+  - Minikube
+    - minikube addons enable heapster
+    - kubectl get pods --namespace=kube-system
+    - Grafana Dashboard: minikube addons open heapster
+
+### Namespaces
+- 
