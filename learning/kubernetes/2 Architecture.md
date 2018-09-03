@@ -123,3 +123,13 @@ Example for exposing IP: https://kubernetes.io/docs/tutorials/stateless-applicat
   - Back to 1st terminal.
     - kubectl get hpa
   
+### Auditing
+- Legacy Auditing, Advanced Auditing (1.8+)
+- Audit Policy
+  - Defines what should be logged.
+  - Defined in a .yaml file.
+- Audit Backend
+  - kube-apiserver provides two backends
+    - Logs
+    - Webhooks
+
