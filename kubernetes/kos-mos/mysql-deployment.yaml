@@ -1,43 +1,48 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: mysql
+  name: db-mysql-main-balancer
 spec:
-  ports:
-  - port: 3306
   selector:
-    app: mysql
-  clusterIP: None
+    app: db-mysql-main
+  ports:
+  - protocol: TCP
+    port: 3306
+    targetPort: 3306
+  type: LoadBalancer
 ---
 apiVersion: apps/v1 # for versions before 1.9.0 use apps/v1beta2
 kind: Deployment
 metadata:
-  name: mysql
+  name: db-mysql-main
 spec:
   selector:
     matchLabels:
-      app: mysql
+      app: db-mysql-main
   strategy:
     type: Recreate
   template:
     metadata:
       labels:
-        app: mysql
+        app: db-mysql-main
     spec:
       containers:
       - image: mysql:5.6
-        name: mysql
+        name: db-mysql-main
         env:
           # Use secret in real usage
         - name: MYSQL_ROOT_PASSWORD
-          value: password
+          valueFrom:
+            secretKeyRef:
+              name: db-mysql-main
+              key: password
         ports:
         - containerPort: 3306
-          name: mysql
+          name: db-mysql-main
         volumeMounts:
         - name: mysql-persistent-storage
           mountPath: /var/lib/mysql
       volumes:
       - name: mysql-persistent-storage
         persistentVolumeClaim:
-          claimName: mysql-pv-claim
+          claimName: db-mysql-main-pv-claim

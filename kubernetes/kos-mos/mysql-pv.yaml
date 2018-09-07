@@ -1,7 +1,7 @@
 kind: PersistentVolume
 apiVersion: v1
 metadata:
-  name: mysql-pv-volume
+  name: db-mysql-main-pv-claim
   labels:
     type: local
 spec:
@@ -11,12 +11,12 @@ spec:
   accessModes:
     - ReadWriteOnce
   hostPath:
-    path: "/Users/duaneleem/Code/Other/Kubernetes Mount"
+    path: "/Users/duaneleem/Code/Other/Kubernetes Volumes/db-mysql-main"
 ---
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
-  name: mysql-pv-claim
+  name: db-mysql-main-pv-claim
 spec:
   storageClassName: manual
   accessModes:
