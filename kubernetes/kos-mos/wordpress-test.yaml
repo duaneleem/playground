@@ -1,0 +1,56 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: wordpress-test-loadbalancer
+  labels:
+    app: wordpress
+spec:
+  ports:
+    - port: 8100
+  selector:
+    app: wordpress
+    tier: frontend
+  type: LoadBalancer
+---
+apiVersion: apps/v1 # for versions before 1.9.0 use apps/v1beta2
+kind: Deployment
+metadata:
+  name: wordpress-test
+  labels:
+    app: wordpress
+spec:
+  selector:
+    matchLabels:
+      app: wordpress
+      tier: frontend
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        app: wordpress
+        tier: frontend
+    spec:
+      containers:
+      - image: wordpress:4.9.8-php7.1-apache
+        name: wordpress-test
+        env:
+        - name: WORDPRESS_DB_HOST
+          # Name of DB k8s service. Typically a load balancer.
+          value: db-mysql-main-balancer
+        - name: WORDPRESS_DB_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: db-mysql-main
+              key: password
+        ports:
+        - containerPort: 80
+          name: wordpress-test
+        volumeMounts:
+        - name: wordpress-test-host-wp-content
+          mountPath: /var/www/html/wp-content
+      volumes:
+      # Link host /wp-content folder.
+      - name: wordpress-test-host-wp-content
+        hostPath:
+          path: /Users/duaneleem/Code/Playground/WordPress Test/wp-content
