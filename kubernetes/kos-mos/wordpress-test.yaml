@@ -3,12 +3,14 @@ kind: Service
 metadata:
   name: wordpress-test-loadbalancer
   labels:
-    app: wordpress
+    type: wordpress
 spec:
   ports:
-    - port: 8100
+    - protocol: TCP
+      port: 8100
+      targetPort: 80
   selector:
-    app: wordpress
+    app: wordpress-test
     tier: frontend
   type: LoadBalancer
 ---
@@ -17,27 +19,32 @@ kind: Deployment
 metadata:
   name: wordpress-test
   labels:
-    app: wordpress
+    app: wordpress-test
+    tier: frontend
+    type: wordpress
 spec:
   selector:
     matchLabels:
-      app: wordpress
+      app: wordpress-test
       tier: frontend
+      type: wordpress
   strategy:
     type: Recreate
   template:
     metadata:
       labels:
-        app: wordpress
+        app: wordpress-test
         tier: frontend
+        type: wordpress
     spec:
       containers:
       - image: wordpress:4.9.8-php7.1-apache
         name: wordpress-test
         env:
+        # Name of DB k8s service. Typically a load balancer.
         - name: WORDPRESS_DB_HOST
-          # Name of DB k8s service. Typically a load balancer.
           value: db-mysql-main-balancer
+        # Password stored from k8s secrets.
         - name: WORDPRESS_DB_PASSWORD
           valueFrom:
             secretKeyRef:
