@@ -1,0 +1,9 @@
+{
+  "name": "wordpress-test",
+  "version": "0.0.1",
+  "license": "MIT",
+  "scripts": {
+    "start": "kubectl create -f wordpress-test.yaml",
+    "stop": "kubectl delete services wordpress-test-loadbalancer && kubectl delete deployments wordpress-test"
+  }
+}
