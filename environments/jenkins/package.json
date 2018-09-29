@@ -1,0 +1,12 @@
+{
+  "name": "jenkins",
+  "version": "1.0.0",
+  "description": "Manage CI/CD via Jenkins.",
+  "main": "index.js",
+  "scripts": {
+    "start": "kubectl create -f k8s-jenkins.yaml",
+    "stop": "kubectl delete services jenkins-kos-mos-loadbalancer && kubectl delete deployments jenkins-kos-mos"
+  },
+  "author": "",
+  "license": "ISC"
+}

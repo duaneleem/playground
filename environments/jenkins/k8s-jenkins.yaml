@@ -1,0 +1,54 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: jenkins-kos-mos-loadbalancer
+  labels:
+    type: jenkins
+spec:
+  ports:
+    - protocol: TCP
+      port: 8200
+      targetPort: 8080
+  selector:
+    app: jenkins-kos-mos
+    tier: devops
+    type: jenkins
+  type: LoadBalancer
+---
+apiVersion: apps/v1 # for versions before 1.9.0 use apps/v1beta2
+kind: Deployment
+metadata:
+  name: jenkins-kos-mos
+  labels:
+    app: jenkins-kos-mos
+    tier: devops
+    type: jenkins
+spec:
+  selector:
+    matchLabels:
+      app: jenkins-kos-mos
+      tier: devops
+      type: jenkins
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        app: jenkins-kos-mos
+        tier: devops
+        type: jenkins
+    spec:
+      containers:
+      - image: jenkins/jenkins:lts
+        name: jenkins-kos-mos
+        ports:
+        - containerPort: 8080
+          name: jenkins-kos-mos
+        volumeMounts:
+        - name: jenkins-kos-mos-host-playground
+          mountPath: /var/jenkins_home/jobs
+      volumes:
+      # Link host /wp-content folder.
+      - name: jenkins-kos-mos-host-playground
+        hostPath:
+          path: /Users/duaneleem/Code/Playground/Notes/environments/jenkins/jobs

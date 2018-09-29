@@ -1,0 +1,6 @@
+Started by user [8mha:////4KQD8wvfP584K224QpKXNsR6y1oLapphQ2yyX3ck8qCtAAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzWEgZu/dLi1CL9xJTczDwAj6GcLcAAAAA=[0madmin
+Building in workspace /var/jenkins_home/jobs/jenkins-test-job/workspace
+[workspace] $ /bin/sh -xe /tmp/jenkins7151488885926442553.sh
++ echo Executing build phase.
+Executing build phase.
+Finished: SUCCESS
