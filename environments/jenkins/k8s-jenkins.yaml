@@ -39,7 +39,7 @@ spec:
         type: jenkins
     spec:
       containers:
-      - image: jenkins/jenkins:lts
+      - image: duaneleem/jenkins-maven:latest
         name: jenkins-kos-mos
         ports:
         - containerPort: 8080
