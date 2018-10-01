@@ -1,0 +1,9 @@
+Started on Oct 1, 2018 6:28:59 AM
+Using strategy: Default
+[poll] Last Built Revision: Revision 0caf6111d5ef4679bf818f99fa448a525566ee69 (refs/remotes/origin/master)
+ > git --version # timeout=10
+ > git ls-remote -h https://github.com/jleetutorial/maven-project.git # timeout=10
+Found 5 remote heads on https://github.com/jleetutorial/maven-project.git
+[poll] Latest remote head revision on refs/heads/master is: 0caf6111d5ef4679bf818f99fa448a525566ee69 - already built by 1
+Done. Took 0.34 sec
+No changes
