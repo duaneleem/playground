@@ -51,6 +51,8 @@ spec:
             secretKeyRef:
               name: db-mysql-main
               key: password
+        - name: WORDPRESS_DEBUG
+          value: "1"
         ports:
         - containerPort: 80
           name: wordpress-test
