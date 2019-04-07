@@ -26,42 +26,27 @@ int main() {
     // user input
     cout << setw(49) << "> Rock Paper Scissors Throw! r/p/s/q > ";
     cin >> choice;
-    choice = tolower(choice);
+    player1 = tolower(choice);
 
     while (choice != 'r' && choice != 'p' && choice != 's' && choice != 'q') {
       cout << setw(49) << "> ERROR: only pick from {r, p, s, q} > ";
       cin >> choice;
     } // while
 
-
-    if (player1 == 0 && player2 == 0) {
-      cout << setw(WI_2) << "> Tie!" << endl;
-    } else if (player1 == 1 && player2 == 0) {
-      cout << setw(WI_2) << "> Win!" << endl;
-    } else if (player1 == 2 && player2 == 0) {
-      cout << setw(WI_2) << "> Lose!" << endl;
-    } else if (player1 == 1 && player2 == 1) {
-      cout << setw(WI_2) << "> Tie!" << endl;
-    } else if (player1 == 2 && player2 == 1) {
-      cout << setw(WI_2) << "> Win!" << endl;
-    } else if (player1 == 0 && player2 == 1) {
-      cout << setw(WI_2) << "> Lose!" << endl;
-    } else if (player1 == 2 && player2 == 2) {
-      cout << setw(WI_2) << "> Tie!" << endl;
-    } else if (player1 == 0 && player2 == 2) {
-      cout << setw(WI_2) << "> Win!" << endl;
-    } else if (player1 == 1 && player2 == 2) {
-      cout << setw(WI_2) << "> Lose!" << endl;
-    } else {
-      // Does nothing?
-    }
-
-    checkThrow(player1, player2);
-
-    generateP2toss();
+    // Determine result between players.
+    switch(checkThrow(player1, generateP2toss())) {
+      case 0:
+        cout << setw(WI_2) << "> Tie!" << endl;
+        break;
+      case 1:
+        cout << setw(WI_2) << "> Lose!" << endl;
+        break;
+      case 2:
+        cout << setw(WI_2) << "> Win!" << endl;
+        break;
+    } // switch(checkThrow(player1, generateP2toss()))
 
     printStatistics(p1Wins, p2Wins, ties, rounds);
-
     finalStatistics(p1Wins, p2Wins, ties, rounds);
 
     //repeat program?
@@ -90,14 +75,15 @@ void welcome() {
   cout << "s: scissors" << endl;
   cout << "q: quit && display statistics\n" << endl;
 }
+
 int checkThrow(char player1, char player2) {
   int result;
 
   switch (player1) {
     case 'r':
-      if (player2 == 'r') result = 0;
-      else if (player2 == 'p') result = 1;
-      else result = 2;
+      if (player2 == 'r') result = 0; // even
+      else if (player2 == 'p') result = 1; // lose
+      else result = 2; // win
       break;
 
     case 'p':
@@ -114,8 +100,7 @@ int checkThrow(char player1, char player2) {
   }
 
   return result;
-
-}
+} // checkThrow()
 
 char generateP2toss() {
   srand(time(0));
@@ -135,11 +120,11 @@ char generateP2toss() {
   }
 
   return cpuPick;
-}
+} // generateP2toss()
 
 void printStatistics(int p1Wins, int p2Wins, int ties, int rounds) {
   cout << setw(20) << "> Rounds: " << rounds << " | " << "P1 wins: " << p1Wins << " | " << "Computer wins: " << p2Wins << " | " << "Ties: " << ties << endl;
-}
+} // printStatistics()
 
 void finalStatistics(int p1Wins, int p2Wins, int ties, int rounds) {
   cout << "\n*************" << endl;
@@ -150,5 +135,4 @@ void finalStatistics(int p1Wins, int p2Wins, int ties, int rounds) {
   cout << setw(WI) << "Computer wins: " << p2Wins << "(" << p2Wins / (float) rounds * 100 << "%" << ")" << endl;
   cout << setw(WI) << "Ties: " << ties << "(" << ties / (float) rounds * 100 << "%" << ")" << endl;
   cout << setw(WI) << "Rounds: " << rounds << "\n\n";
-
-}
+} // finalStatistics()
