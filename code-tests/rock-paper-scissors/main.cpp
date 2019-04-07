@@ -73,7 +73,7 @@ int main() {
   exit(0);
 
   return 0;
-}
+} // int main()
 
 void welcome() {
   cout << "***ROCK, PAPER, SCISSORS GAME***\n\n";
@@ -83,7 +83,7 @@ void welcome() {
   cout << "p: paper" << endl;
   cout << "s: scissors" << endl;
   cout << "q: quit && display statistics\n" << endl;
-}
+} // welcome()
 
 int checkThrow(char player1, char player2) {
   int result;
