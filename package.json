@@ -1,0 +1,23 @@
+{
+  "name": "duaneleem-notes",
+  "version": "1.0.0",
+  "description": "Bunch of notes from Duane.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "php -S 0.0.0.0:8080"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://duaneleem@github.com/duaneleem/playground.git"
+  },
+  "keywords": [
+    "notes"
+  ],
+  "author": "Duane Leem <duane@leemfamily.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/duaneleem/playground/issues"
+  },
+  "homepage": "https://github.com/duaneleem/playground#readme"
+}
