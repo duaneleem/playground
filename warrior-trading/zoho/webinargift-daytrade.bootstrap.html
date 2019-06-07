@@ -1,0 +1,117 @@
+<!-- https://www.warriortrading.com/webinargift-daytrade/ -->
+<style>
+  * {
+    box-sizing: border-box;
+  }
+  
+  input[type=text], input[type=email], select, textarea {
+    width: 100%;
+    padding: 12px;
+    /* border: 1px solid #ccc; */
+    border-radius: 4px;
+    resize: vertical;
+    border: 1px solid darkgray;
+  }
+  
+  label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+  }
+  
+  input[type=submit] {
+    /* background-color: #4CAF50; */
+    /* color: white; */
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+  }
+  
+  input[type=submit]:hover {
+    /* background-color: #45a049; */
+  }
+  
+  .container-form {
+    border-radius: 5px;
+    /* background-color: #f2f2f2; */
+    padding: 20px;
+  }
+  
+  .col-25 {
+    float: left;
+    width: 25%;
+    margin-top: 6px;
+  }
+  
+  .col-75 {
+    float: left;
+    width: 75%;
+    margin-top: 6px;
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 600px) {
+    .col-25, .col-75, input[type=submit] {
+      width: 100%;
+      margin-top: 0;
+    }
+  }
+
+  /* Removes spacing after the label. */
+  #crmWebToEntityForm > form div.col-25 {
+    margin-bottom: 0px;
+  }
+</style>
+<!-- Form -->
+<div id="crmWebToEntityForm" class="container-form">
+  <form action='https://crm.zoho.com/crm/WebToLeadForm' name=WebToLeads4032959000000248099 method='POST' onSubmit='javascript:document.charset="UTF-8"; return checkMandatory4032959000000248099()' accept-charset='UTF-8'>
+    <input type='text' style='display:none;' name='xnQsjsdp' value='d688196f3421bf5251380acc5a8b32e8954b0f2a989cd419613bf77676747609'></input>
+    <input type='hidden' name='zc_gad' id='zc_gad' value=''></input>
+    <input type='text' style='display:none;' name='xmIwtLD' value='ad898a199946f22e703895db7072d5c5f3c71eed8ccda863fa460501a1ec81ab'></input> 
+    <input type='text' style='display:none;' name='actionType' value='TGVhZHM='></input>
+    <input type='text' style='display:none;' name='returnURL' value='https://www.warriortrading.com/warrior-pro-info/' > </input>
+    <!-- Fields -->
+    <div class="row">
+      <div class="col-25">
+        <label for="First Name">First Name *</label>
+      </div>
+      <div class="col-75">
+        <input type="text" maxlength='40' name='First Name' placeholder="Your First Name" required />
+      </div>
+    </div><!-- /.row -->
+    <div class="row">
+      <div class="col-25">
+        <label for="Last Name">Last Name *</label>
+      </div>
+      <div class="col-75">
+        <input type="text" maxlength='80' name='Last Name' placeholder="Your Last Name" required />
+      </div>
+    </div><!-- /.row -->
+    <div class="row">
+      <div class="col-25">
+        <label for="Email">Email *</label>
+      </div>
+      <div class="col-75">
+        <input type="email" class="form-control" maxlength='100' name='Email' placeholder="Email" required />
+      </div>
+    </div><!-- /.row -->
+    <div class="row">
+      <div class="col-25">
+        <label for="Phone">Phone</label>
+      </div>
+      <div class="col-75">
+        <input type="text" class="form-control" maxlength='30' placeholder="Phone" name='Phone' />
+      </div>
+    </div><!-- /.row -->
+  
+  
+  </form>
+</div>
