@@ -1,5 +1,10 @@
+# Vim Controls
+:tabe # Create tab.
+gt # Next tab.
 
 
-
-Speed Team 20190628
-
+# Tmux Controls
+ctrl + b # Prefix
+0-9 # Cycle through tabs.
+c # Create window
+: resize-pane -D  # Resize.
