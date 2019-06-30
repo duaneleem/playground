@@ -1,18 +1,16 @@
-# Vim Controls
-:tabe # Create tab.
-gt # Next tab.
 
 
-# Tmux Controls
-ctrl + b # Prefix
-0-9 # Cycle through tabs.
-n # Next tab.
-p # Previous tab.
-) # Next session.
-c # Create tab.
-: resize-pane -D  # Resize pan
 
-# Tmux Panes
-% # horizontal split
-" # vertical split
+
+
+
+
+
+
+
+
+
+
+
+
 
