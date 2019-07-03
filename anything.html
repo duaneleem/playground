@@ -1,78 +1,137 @@
-<!--  ----------------------------------------------------------------------  -->
-<!--  NOTE: Please add the following <META> element to your page <HEAD>.      -->
-<!--  If necessary, please modify the charset parameter to specify the        -->
-<!--  character set of your HTML page.                                        -->
-<!--  ----------------------------------------------------------------------  -->
+<label> What is your email *(required)
+[email* Email] </label>
 
-<META HTTP-EQUIV="Content-type" CONTENT="text/html; charset=UTF-8">
-  <script src="https://www.google.com/recaptcha/api.js"></script>
-  <script>
-   function timestamp() { var response = document.getElementById("g-recaptcha-response"); if (response == null || response.value.trim() == "") {var elems = JSON.parse(document.getElementsByName("captcha_settings")[0].value);elems["ts"] = JSON.stringify(new Date().getTime());document.getElementsByName("captcha_settings")[0].value = JSON.stringify(elems); } } setInterval(timestamp, 500); 
-  </script>
-  
-  <!--  ----------------------------------------------------------------------  -->
-  <!--  NOTE: Please add the following <FORM> element to your page.             -->
-  <!--  ----------------------------------------------------------------------  -->
-  
-  <form action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST">
-  
-  <input type=hidden name='captcha_settings' value='{"keyname":"stagedhomes","fallback":"true","orgId":"00D1U000000sOlN","ts":""}'>
-  <input type=hidden name="oid" value="00D1U000000sOlN">
-  <input type=hidden name="retURL" value="https://pages.stagedhomes.com/thank-you/">
-  
-  <!--  ----------------------------------------------------------------------  -->
-  <!--  NOTE: These fields are optional debugging elements. Please uncomment    -->
-  <!--  these lines if you wish to test in debug mode.                          -->
-  <!--  <input type="hidden" name="debug" value=1>                              -->
-  <!--  <input type="hidden" name="debugEmail" value="duane@stagedhomes.com">   -->
-  <!--  ----------------------------------------------------------------------  -->
-  
-  <label for="first_name">First Name</label><input  id="first_name" maxlength="40" name="first_name" size="20" type="text" /><br>
-  
-  <label for="last_name">Last Name</label><input  id="last_name" maxlength="80" name="last_name" size="20" type="text" /><br>
-  
-  <label for="email">Email</label><input  id="email" maxlength="80" name="email" size="20" type="text" /><br>
-  
-  <label for="company">Company</label><input  id="company" maxlength="40" name="company" size="20" type="text" /><br>
-  
-  <label for="city">City</label><input  id="city" maxlength="40" name="city" size="20" type="text" /><br>
-  
-  <label for="state">State/Province</label><input  id="state" maxlength="20" name="state" size="20" type="text" /><br>
-  
-  <label for="salutation">Salutation</label><select  id="salutation" name="salutation"><option value="">--None--</option><option value="Mr.">Mr.</option>
-  <option value="Ms.">Ms.</option>
-  <option value="Mrs.">Mrs.</option>
-  <option value="Dr.">Dr.</option>
-  <option value="Prof.">Prof.</option>
-  </select><br>
-  
-  <label for="title">Title</label><input  id="title" maxlength="40" name="title" size="20" type="text" /><br>
-  
-  <label for="phone">Phone</label><input  id="phone" maxlength="40" name="phone" size="20" type="text" /><br>
-  
-  <label for="country">Country</label><input  id="country" maxlength="40" name="country" size="20" type="text" /><br>
-  
-  <label for="description">Description</label><textarea name="description"></textarea><br>
-  
-  <label for="url">Website</label><input  id="url" maxlength="80" name="url" size="20" type="text" /><br>
-  
-  <label for="lead_source">Lead Source</label><select  id="lead_source" name="lead_source"><option value="">--None--</option><option value="Website">Website</option>
-  <option value="Phone">Phone</option>
-  <option value="Email">Email</option>
-  </select><br>
-  
-  Home staging as a career:<input  id="00N1U00000PJB64" name="00N1U00000PJB64" type="checkbox" value="1" /><br>
-  
-  ASP Staging designation for Real Estate:<input  id="00N1U00000PJB69" name="00N1U00000PJB69" type="checkbox" value="1" /><br>
-  
-  Adding Home Staging to my business:<input  id="00N1U00000PJB6J" name="00N1U00000PJB6J" type="checkbox" value="1" /><br>
-  
-  ASP Masters Course:<input  id="00N1U00000PJB6T" name="00N1U00000PJB6T" type="checkbox" value="1" /><br>
-  
-  Subject:<textarea  id="00N1U00000QqKG3" name="00N1U00000QqKG3" type="text" wrap="soft"></textarea><br>
-  
-  <div class="g-recaptcha" data-sitekey="6Le-_AMTAAAAALK8HJZy0WyzIKsMp5T1sEvQNIYr"></div><br>
-  <input type="submit" name="submit">
-  
-  </form>
-  
+<label> What is your first and last name *(required)
+[text* Name]  </label>
+
+<label> Are you legally eligible to work in the United States? *(required)
+[checkbox LegalEligible "Yes" "No"] </label>
+
+<label> Are you 18 years or older? *(required)
+[checkbox Age "Yes" "No"] </label>
+
+<label> Are you a licensed cosmetologist? If yes, please enter the state you are licensed in and your license number. If no, leave this section blank.
+    [text cosmetologist] </label>
+
+<label> What salary/rate of pay do you expect to receive if you are employed? * (required)
+    [email* your-email] </label>
+
+<label> What date are you available to start? *(required)
+    [text Startdate] </label>
+
+<label> Have you been convicted of a felony within the last 7 years?
+Conviction will not necessarily disqualify an applicant from employment. *(required)
+[checkbox felony "Yes" "No"] </label>
+
+<label> If yes please explain 
+    [text explain] </label>
+
+<br>Work History:</b>
+Employment history – Current or most recent employer
+Please begin with your most recent employer. Do not exclude any employment.<Br><Br>
+
+<label> If currently employed, may we contact your present employer?
+[checkbox contact  "Yes" "No"] </label>
+
+<label> Company name <br>
+Most recent or current employer. 
+    [text Company1] </label>
+
+<label> Employment dates
+Enter both your start date and end date, if applicable.
+    [text Company1date] </label>
+
+<label> Rate of pay
+Enter your pay rate at both the start of your employment and at the end of your employment.
+    [text Company1pay] </label>
+
+<label>Company address
+    [text Company1address] </label>
+
+<label>Company phone number
+    [text Company1number] </label>
+
+<label>Supervisor's name
+    [text Company1supername] </label>
+
+<label>Supervisor's title
+    [text Company1supertitle] </label>
+
+<label>Your Position and responsibilities
+    [text Company1job] </label>
+
+<label>Reason for leaving
+Please explain.
+    [textarea Company1left] </label>
+
+Company 2
+
+<label> Company name <br>
+Most recent or current employer. 
+    [text Company2] </label>
+
+<label> Employment dates
+Enter both your start date and end date, if applicable.
+    [text Company2date] </label>
+
+<label> Rate of pay
+Enter your pay rate at both the start of your employment and at the end of your employment.
+    [text Company2pay] </label>
+
+<label>Company address
+    [text Company2address] </label>
+
+<label>Company phone number
+    [text Company2number] </label>
+
+<label>Supervisor's name
+    [text Company2supername] </label>
+
+<label>Supervisor's title
+    [text Company2supertitle] </label>
+
+<label>Your Position and responsibilities
+    [text Company2job] </label>
+
+<label>Reason for leaving
+Please explain.
+    [textarea Company2left] </label>
+
+Company 3
+
+<label> Company name <br>
+Most recent or current employer. 
+    [text Company3] </label>
+
+<label> Employment dates
+Enter both your start date and end date, if applicable.
+    [text Company3date] </label>
+
+<label> Rate of pay
+Enter your pay rate at both the start of your employment and at the end of your employment.
+    [text Company3pay] </label>
+
+<label>Company address
+    [text Company3address] </label>
+
+<label>Company phone number
+    [text Company3number] </label>
+
+<label>Supervisor's name
+    [text Company3supername] </label>
+
+<label>Supervisor's title
+    [text Company3supertitle] </label>
+
+<label>Your Position and responsibilities
+    [text Company3job] </label>
+
+<label>Reason for leaving
+Please explain.
+    [textarea Company3left] </label>
+
+
+
+
+[submit "Send"]
+
