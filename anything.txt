@@ -1,35 +1,8 @@
 docker run --name main-db -p 3306:3306 -e MYSQL_ROOT_PASSWORD=someHardP@$$w0rd -d mysql:latest
 
-# 20190710 CRM Data Deletion
-Duane
--  
-
-
-Stuff
-- Data is not removed completely.
-- Deleted still there, no longer active, 
-- A function for WT to initiate GDPR deletion.
-- 
-
-
-AlexT
-- 4-5 places in CRM that data is visible.
-- Hide billing info & email.
-- Login is blocked.
-- Flag for deletion
-  - Billing history still in system
-- API calls for deletion: AC, MC, etc
-
-
-Tasks
-- What info should be hidden or available?
-- Need fields to give to ATI
-- Options
-  1. Inactive status but still in CRM?
+# Subscription not auto cancelling other subscription.
+198979 - No product groups.
 
 
 
-Arsh
-Today: Options: Choosing Strikes and Expirations
-Next week: Large cap Market Analysis
 
