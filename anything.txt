@@ -4,5 +4,49 @@ docker run --name main-db -p 3306:3306 -e MYSQL_ROOT_PASSWORD=someHardP@$$w0rd -
 198979 - No product groups.
 
 
+# Sterling Ops
+Duane
+- Confirm: Enable / Disable don't need DB info?
+- 
+
+Stuff
+- Ask Riley about welcome emails going to spam.
 
 
+# IT Team Meeting 20190711
+- Only WP Plugin, not PHP7.3
+- Carina w/ product read-only.
+- Kount update for Barry.
+
+
+Requests
+- EOD -> Domo
+
+
+# IT/Support Sync 20190715
+Duane
+- Kount not counting Device ID
+- 
+
+Stuff
+- Joseph: Cookie banner about collecting cookies.
+  - Only for EU customers?
+- Stephen: CRM subscription not recognizing canceled by customer/admin?
+- Travis: ChatBot submitting blanks?
+- 
+
+# Speed Team 20190716
+Duane
+- 
+
+
+Other
+- G Suite Relay
+- 
+
+
+# IT Team 20190718
+Duane
+- Speed Team: High level test plan for one environment
+- Add BillR to Sterling Ops about Email Relay
+- 
