@@ -45,8 +45,4 @@ Other
 - 
 
 
-# IT Team 20190718
-Duane
-- Speed Team: High level test plan for one environment
-- Add BillR to Sterling Ops about Email Relay
-- 
+ 
