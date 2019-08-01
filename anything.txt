@@ -4,25 +4,6 @@ docker run --name main-db -p 3306:3306 -e MYSQL_ROOT_PASSWORD=someHardP@$$w0rd -
 198979 - No product groups.
 
 
-# Sterling Ops
-Duane
-- Confirm: Enable / Disable don't need DB info?
-- 
-
-Stuff
-- Ask Riley about welcome emails going to spam.
-
-
-# IT Team Meeting 20190711
-- Only WP Plugin, not PHP7.3
-- Carina w/ product read-only.
-- Kount update for Barry.
-
-
-Requests
-- EOD -> Domo
-
-
 # IT/Support Sync 20190715
 Duane
 - Kount not counting Device ID
@@ -35,14 +16,98 @@ Stuff
 - Travis: ChatBot submitting blanks?
 - 
 
-# Speed Team 20190716
-Duane
-- 
-
-
-Other
-- G Suite Relay
-- 
-
-
  
+# Joseph 20190723
+- Docker installation.
+- Create WP root on dev PC.
+- Download AMP
+- Download Static HTML plugin.
+- 
+
+Stuff
+- Shopify vs WooCommerce
+  - Plugins Cost
+  - Hosting Cost
+- Learning Shopify Dev - Cost
+
+
+
+duane+test@warriortrading.com
+YmPTSkUzbktfcbtc$aj9k(bK
+
+# SEO 20190725
+Stuff
+- spyfoo
+- haro
+- beamusup.com
+- siteliner
+- 
+
+
+# IT Meeting 20190725
+Info
+- External HTML on S3 (speed team)
+- CRM & Service Desk: Read Only Coupon
+  - Need this logged also.
+- 
+
+
+
+date.timezone = "America/New_York";
+332655@warriortrading.com
+W@rrior1
+
+
+
+# ATI Job 16678
+- PP CRM: 199092
+- Example: 331440
+
+
+# PHP info
+- /usr/local/etc/php
+
+
+# IT/Support 20190729
+- Create accounts
+- Send out link for test CRM and update test doc.
+- LMS not work, update doc.
+- Ask if BarryH can add SSO access to plugin dev.
+- CRM / Zoho?
+  - Lead -> Close
+  - 
+
+
+# Speed Team 20190730
+Duane Tasks
+- Live Webinar to Google AMP after Trading Course page.
+- Send email out on static HTML homepage to team.
+- Look into bug reporting tools.
+  - Use UAT document as template.
+- By Thurs, Staging Env
+
+
+Notes
+- Charge towards P05
+- 
+
+
+# IT Architectural 20190730
+- Check out Gatsby and put it into WP.
+- Help BarryH with WP.
+- Confluence is pushed out... to sept?
+- Automated E2E recording activities
+- 
+
+# Joseph Sync 20190730
+Add Joseph to wt-master s3
+- 
+
+
+# Sales 20190731
+- New forms. Ask Steph
+- Hold my seat
+- 2 To Dos
+- 
+
+

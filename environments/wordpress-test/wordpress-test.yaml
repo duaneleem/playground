@@ -39,7 +39,7 @@ spec:
         type: wordpress
     spec:
       containers:
-      - image: wordpress:4.9.8-php7.1-apache
+      - image: wordpress:5.2.2-php7.3-apache
         name: wordpress-test
         env:
         # Name of DB k8s service. Typically a load balancer.
