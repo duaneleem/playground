@@ -16,24 +16,6 @@ Stuff
 - Travis: ChatBot submitting blanks?
 - 
 
- 
-# Joseph 20190723
-- Docker installation.
-- Create WP root on dev PC.
-- Download AMP
-- Download Static HTML plugin.
-- 
-
-Stuff
-- Shopify vs WooCommerce
-  - Plugins Cost
-  - Hosting Cost
-- Learning Shopify Dev - Cost
-
-
-
-duane+test@warriortrading.com
-YmPTSkUzbktfcbtc$aj9k(bK
 
 # SEO 20190725
 Stuff
@@ -103,11 +85,29 @@ Notes
 Add Joseph to wt-master s3
 - 
 
+# Innovation Group 20190801
+- Up your business
 
-# Sales 20190731
-- New forms. Ask Steph
-- Hold my seat
-- 2 To Dos
+
+# Speed Team 20190806
+Duane
+- Tweaks from Duane on Google AMP
+- AMP by Friday
+- Webinar Signup Page
+- Look for Sumo code alternative.
 - 
+
+# IT Architectural 20190806
+Duane
+- Make a list of JS loaded on static homepage.
+- Contact Sumo for different JS alternative.
+- Test all in incognito.
+- Let BarryG know about Store. via email
+- 
+
+# Sales Ops 20190806
+Duane
+- Steph is looking for API development for Zoho CRM?
+
 
 
