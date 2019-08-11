@@ -1,0 +1,40 @@
+<style>
+  #logindiv>form>div.signIn-box-left>h2{text-align:center;margin-bottom:20px}#login-button{display:block;margin:auto;margin-top:20px}.signIn-box-right{display:none!important}
+</style>
+
+<div id="logo-thumbnail" style="display:none;"><img src="https://media.warriortrading.com/2018/05/WT_Logo_400x400_BG.png" /></div>
+<link rel="stylesheet" href="https://www.warriortrading.com/wp-content/plugins/ati/loginform.css?v=1.15" type="text/css" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+<script type="text/javascript" src="/wp-content/plugins/ati/login.js"></script>
+
+<p style="text-align: center; margin-bottom: 0px;">
+    If your membership is active, it may not give you access to this page.  <a href="https://secure.warriortrading.com/ati_pro/ati_merchant/members/sales/">Click here</a> to check on your membership status or update billing information. <a href="https://support.warriortrading.com/support/tickets/new">Click here​</a> to send a Support Request for assistance.
+</p>
+
+<div class="entry-content">
+  <div class="signIn-form">
+    <div id="loginresult">
+      <div id="logmsg"></div>
+      <input class="signIn-button" type="button" value="OK" onclick="closemsg();" />
+
+    </div>
+    <div id="ajaxloader"><img src="/wp-content/plugins/ati/ajax_loader_blue_128.gif" /></div>
+    <div id="logindiv">
+      <form action="#" method="post">
+        <div class="signIn-box-left">
+          <h2>Sign in</h2>
+          <input id="username" class="signIn-field" name="username" type="text" placeholder="username" />
+          <input id="password" class="signIn-field" name="password" type="password" placeholder="password" />
+          <input id="login-button" class="signIn-button" name="loginbtn" type="button" value="Sign in"onclick="login();" />
+        </div>
+        <div class="signIn-box-right">
+          <h2>Forgot your password?</h2>
+          Send your password to your email address.
+
+          <input id="email" class="signIn-field" name="email" type="text" placeholder="email" />
+          <input id="pwd-button" class="signIn-button" name="pwd-button" type="button" value="Send" onclick="pwdlookup();" />
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
