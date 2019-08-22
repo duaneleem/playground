@@ -81,9 +81,6 @@ Notes
 - Automated E2E recording activities
 - 
 
-# Joseph Sync 20190730
-Add Joseph to wt-master s3
-- 
 
 # Innovation Group 20190801
 - Up your business
@@ -108,6 +105,53 @@ Duane
 # Sales Ops 20190806
 Duane
 - Steph is looking for API development for Zoho CRM?
+
+
+HomeStagingResources.com
+
+# SEO 20190807
+- Digital Warlock
+- 
+
+# Desktop IT 20190807
+- Web Security - Centralized
+  - Several options.
+  - 
+
+
+# IT/Support Sync 20190812
+Duane
+- 
+
+Stuff
+- Going w/ Zoho CRM Plus
+-  
+
+
+# IT Architecture 20190813
+- Gatsby
+- Zoho CRM Plusu
+- Lambda
+- Phone / API from CRM for Authentication
+  - Does CRM already have authentication API?
+- 
+
+JW Player API
+
+
+# Speed Team @ Bills 20190914
+- Automated tests between 2 pages.
+- Tangible $ on upgrade to Gatsby
+- 
+
+# Compliance @ Bills 20190914
+- Topic: Data Classification and Retention
+- Ask AlexT when we need to "mask/delete" people, how fast can he finish that?
+  - Only CS can get their info deleted
+  - Try to nuke a test account to see what happens today.
+  - Can info be removed from reports?
+- For BillR: Play around w/ Vault.
+- 
 
 
 
