@@ -154,4 +154,27 @@ JW Player API
 - 
 
 
+# WP Meetup Contributor Day 20190818
+- Test: gutenberg.eastbaywp.com
+- Site District / Matt
+- 5% contribute to WP
+- Speaker training if interested (October).
+- PHPUnit
+- VVV
+- BadCamp October 2nd, Hotel Shattuck Berkeley
+- 
+
+
+# Speed Team 20190820
+- Documentation on Odin
+- Add AMP Homepage
+
+
+# IT Team 20190822
+- Drift: Ask team on what they want (reply email).
+- CRM Product Read-Only for Ross
+- Coupon changes via Confluence -> Forward to team.
+- CMS status
+- 
+
 
