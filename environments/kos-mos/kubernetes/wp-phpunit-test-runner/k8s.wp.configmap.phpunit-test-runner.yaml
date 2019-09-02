@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: wordpress-test-cm-entrypoint
+data:
+  entrypoint.sh: |-
+    #!/bin/bash
+    source /var/www/html/wp-content/other/phpunit-test-runner/.env
