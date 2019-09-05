@@ -13,4 +13,7 @@ export EDITOR=vim
 # MySQL Client
 PATH=$PATH:/Applications/MySQLWorkbench.app/Contents/MacOS
 
-
+# Force xterm so vim colors work when not in tmux too
+export TERM=xterm-256color
+export LANG=en_US.UTF-8
+export EDITOR=vim
