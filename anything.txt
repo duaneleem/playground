@@ -113,21 +113,6 @@ HomeStagingResources.com
 - Digital Warlock
 - 
 
-# Desktop IT 20190807
-- Web Security - Centralized
-  - Several options.
-  - 
-
-
-# IT/Support Sync 20190812
-Duane
-- 
-
-Stuff
-- Going w/ Zoho CRM Plus
--  
-
-
 # IT Architecture 20190813
 - Gatsby
 - Zoho CRM Plusu
@@ -139,11 +124,6 @@ Stuff
 JW Player API
 
 
-# Speed Team @ Bills 20190914
-- Automated tests between 2 pages.
-- Tangible $ on upgrade to Gatsby
-- 
-
 # Compliance @ Bills 20190914
 - Topic: Data Classification and Retention
 - Ask AlexT when we need to "mask/delete" people, how fast can he finish that?
@@ -154,28 +134,47 @@ JW Player API
 - 
 
 
-# WP Meetup Contributor Day 20190818
-- Test: gutenberg.eastbaywp.com
-- Site District / Matt
-- 5% contribute to WP
-- Speaker training if interested (October).
-- PHPUnit
-- VVV
-- BadCamp October 2nd, Hotel Shattuck Berkeley
-- 
-
-
-# Speed Team 20190820
-- Documentation on Odin
-- Add AMP Homepage
-
-
 # IT Team 20190822
 - Drift: Ask team on what they want (reply email).
 - CRM Product Read-Only for Ross
 - Coupon changes via Confluence -> Forward to team.
 - CMS status
 - 
+
+
+# IT Team 20190829
+Topics
+- AlexF + AC Tags / Zoho CRM
+- Give Google AMP pages to Bill Scanlin
+- 
+
+
+# Speed Team 20190903
+- Done: Update test plan notes.
+- Done: Review test plan.
+- Draft of Phase 3
+- Done: Teach BR K8s git pull.
+- 
+
+
+# IT Team 20190905
+Topics
+- Ask Steph about Drift for CNAME
+- Ask if people need help before I go.
+- Sync w/ Bill Riley on Google AMP.
+- Quick validation from team on PHP7 test environment.
+- WT Store authorize.net plugin.
+- Sync w/ BarryH WP Development.
+- Done: URL for BillS of CRM staging.
+- Dashboard Test Pages for BarryH
+- 
+
+
+# Speed Team 20190910
+Topics
+- Maybe: /stocks or  /day-trading ???
+- 
+
 
 
 
