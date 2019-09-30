@@ -17,3 +17,7 @@ PATH=$PATH:/Applications/MySQLWorkbench.app/Contents/MacOS
 export TERM=xterm-256color
 export LANG=en_US.UTF-8
 export EDITOR=vim
+
+# Make git a bit easier.
+alias g="git add . && git commit -m 'Made changes.' && git push"
+
