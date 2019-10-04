@@ -185,6 +185,14 @@ Notes
   - Roll out plan.
 
 
-# IT Architectural 20191001
--  
+# IT Meeting 20191003
+Notes
+- API from CRM? Does it exist?
+- Execution Plan for Plugins
+- Kount - Find out what happened to disable
+- Ross wants net sales?
+- 
+
+
+
 
