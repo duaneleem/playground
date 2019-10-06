@@ -13,4 +13,4 @@ export PATH=$HOME/bin:$PATH
 export PATH=~/.local/bin:$PATH
 
 # Reset to user's folder.
-cd ~
+#cd ~
