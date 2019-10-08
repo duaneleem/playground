@@ -195,4 +195,31 @@ Notes
 
 # All Hands 20191008
 Notes
+- Monthly All Hands
+- Martha Stewart
+  - Great Cook
+- Tech
+  - Nano / Wowza (Mike / Ross)
+- IC Miami
+  - 12/11
+  - Team arrives 12/10
+
+# Speed Team 20191008
+Notes
+- Wed rollout for static HTML
+- Send UAT url wtmain-plugins
+- Google AMP follow up
+- AMP bouncerate of 75% ~ investigate why.
+- PHP7 UAT for Sean.
+- PHP7 w/ Joseph and find out what problem he's having.
+  - PHP7 Joseph deploying environment.
+Action Items
+- Resend out wtmain-plugin deployment plan
+- 7pm PST deployment plan Static HTML
+
+
+# IT Architectural 20191008
+Notes
+- Send Barry SSO chat SSO script
+- Talk w/ team about WT scaling.
 - 
