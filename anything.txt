@@ -223,3 +223,16 @@ Notes
 - Send Barry SSO chat SSO script
 - Talk w/ team about WT scaling.
 - 
+
+
+# Kate 20191009
+Notes
+- VIP Block List (rule)
+- Decline Status should not be processed on CRM
+
+
+# Drift / AC Integration 20191009
+Notes
+- Webhook when email is captured -> Save to AC automation
+- 
+
