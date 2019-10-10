@@ -236,3 +236,9 @@ Notes
 - Webhook when email is captured -> Save to AC automation
 - 
 
+
+# IT Team 20191010
+Notes
+- Follow Up: ClickFunnels + Drift
+- 
+
