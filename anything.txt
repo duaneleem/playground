@@ -251,4 +251,12 @@ Actions
 - Service Desk w/ Sean (give him access)
  
 
+Ask Alex T about CRM API
+
+
+# IT Architectural 20191015
+Actions
+- Add BillR/BillS to Google Cloud
+- Extra meta data for Chatroom
+- Ask ATI about API.
 
