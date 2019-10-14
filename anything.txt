@@ -206,16 +206,16 @@ Notes
 
 # Speed Team 20191008
 Notes
-- Wed rollout for static HTML
-- Send UAT url wtmain-plugins
-- Google AMP follow up
+- Deferred: Wed rollout for static HTML
+- Done: Send UAT url wtmain-plugins
+- Done: Google AMP follow up
 - AMP bouncerate of 75% ~ investigate why.
-- PHP7 UAT for Sean.
+- Done :PHP7 UAT for Sean.
 - PHP7 w/ Joseph and find out what problem he's having.
   - PHP7 Joseph deploying environment.
 Action Items
-- Resend out wtmain-plugin deployment plan
-- 7pm PST deployment plan Static HTML
+- Done: Resend out wtmain-plugin deployment plan
+- Deferred: 7pm PST deployment plan Static HTML
 
 
 # IT Architectural 20191008
@@ -241,5 +241,14 @@ Notes
 Notes
 - Follow Up: ClickFunnels + Drift
 - 
+
+
+# Speed Team 20191014
+Notes
+- 10/25 Deployment WP Plugin 
+Actions
+- Create Risk Assesment, Deployment
+- Service Desk w/ Sean (give him access)
+ 
 
 
