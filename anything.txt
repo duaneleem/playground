@@ -278,4 +278,10 @@ Notes
 - Markedo
 - 
 
+# Ross 20191016
+Actions
+- Net Sales First
+- Sales Graph shows net net
+- Special Rports -> Net Net
+
 
