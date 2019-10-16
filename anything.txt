@@ -268,3 +268,14 @@ Actions
 - HP: Remove Living Room Bundles
 - About: Remove
 
+
+# Marketing Ops 20191016
+Notes
+- Custom variables on AC from CRM.
+  - Ask Steph for custom variables.
+  - This is addition to adding to AC tags.
+  - Variable: Warrior Starter, Warrior Pro, Inner Circle
+- Markedo
+- 
+
+
