@@ -260,3 +260,11 @@ Actions
 - Extra meta data for Chatroom
 - Ask ATI about API.
 
+
+# Staging Depot 20191015
+Notes
+- 
+Actions
+- HP: Remove Living Room Bundles
+- About: Remove
+
