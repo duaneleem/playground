@@ -284,4 +284,6 @@ Actions
 - Sales Graph shows net net
 - Special Rports -> Net Net
 
+# 
+Ask Google AMP about bouncerate
 
