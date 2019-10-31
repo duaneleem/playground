@@ -81,3 +81,21 @@ Notes
   - Availability Calendar For Items Grouped By Name NOT enabled for name.
 - 
 
+
+# Marketing Ops 20191030
+Notes
+- Attribution modeling.
+- 3 webinars for November.
+- 
+
+
+# IT Ops 20191031
+Notes
+- Verify w/ Sean on next AMP page.
+- Carina & Warrior Store
+- Spin up environment for Sean (exit intent).
+- 
+
+
+
+
