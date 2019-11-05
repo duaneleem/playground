@@ -89,11 +89,36 @@ Notes
 - 
 
 
-# IT Ops 20191031
+# IT/Support Ops 20191104
 Notes
-- Verify w/ Sean on next AMP page.
-- Carina & Warrior Store
-- Spin up environment for Sean (exit intent).
+- Product triggering
+- CS Tab: 
+  - Not all functionality for everyone
+  - 
+- Steph
+  - Drift + AC
+  - ? WebinarJam
+  - ? Privy: Need an env
+- 
+
+
+# Bill 1:1 20191104
+Notes
+- API Gateway Odin w/ Barry
+- Documentation WP ATI plugin
+- Ping Sean on WT PHP7
+
+
+# Speed Team 20191105
+Notes
+- Create Sean login on CRM staging.
+- Carina & Gavin
+- Ask BarryH if he has script
+- AMP fonts need to be absolute called.
+- 
+
+# IT Architecture 20191105
+Notes
 - 
 
 
