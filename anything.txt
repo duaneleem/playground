@@ -117,10 +117,32 @@ Notes
 - AMP fonts need to be absolute called.
 - 
 
-# IT Architecture 20191105
-Notes
+# Sterling Ops 20191107
+Tasks
+- Send email to Igor if we're done.
+- 
+
+# IT Meeting Ops 20191107
+Tasks
+- Let Sean know about WTN K8s
+- TweetID
+- Privy ID
+- Carina w/ new tab.
+- GSheet Arsh
+- CRM report on logins and required password changes.
+- CRM auth w/ WP plugin and send to Barry
 - 
 
 
+# IT Architectural 20191112
+Tasks
+- Develop test MCRYPT SSO page.
+- Endpoint for each SOAP
+  - SOAP definition file.
 
 
+# Marketing Ops 20191113
+Tasks
+- Coupon codes.
+- Test Warrior Pro Payment Plans December
+- 
