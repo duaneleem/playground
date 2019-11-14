@@ -145,4 +145,7 @@ Tasks
 Tasks
 - Coupon codes.
 - Test Warrior Pro Payment Plans December
+- Alternative to WebinarJam
+  - Markedo
+  - Webinar Ninja
 - 
