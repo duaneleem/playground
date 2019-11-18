@@ -116,11 +116,7 @@ Notes
 - Ask BarryH if he has script
 - AMP fonts need to be absolute called.
 - 
-
-# Sterling Ops 20191107
-Tasks
-- Send email to Igor if we're done.
-- 
+ 
 
 # IT Meeting Ops 20191107
 Tasks
@@ -148,4 +144,28 @@ Tasks
 - Alternative to WebinarJam
   - Markedo
   - Webinar Ninja
+
+
+# IT Ops 20191114
+Tasks
+- WTM flowchart on AWS Fargate
+- Drift -> AC
+- Ask Sean about K8s WTN
+  - Ask BillR
+- Joseph WTS disclaimer.
+- Access report of CRM
+- Lauren CMS Nexio agreement.
+- Agenda for next Wednesday
+
+
+# BillS 1:1 20191118
+Agenda
+- WTN Autoscaling
+- WTM PHP 7
+- Thursday-Sunday PTO
+Notes
 - 
+
+
+
+
