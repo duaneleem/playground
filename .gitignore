@@ -3,7 +3,8 @@
 /learning/react-playlist/node_modules
 
 # Cache
-.anything.txt.swo
+*.swp
+*.swo
 
 # Contains random files.
 /other
