@@ -166,22 +166,11 @@ Agenda
 Notes
 - 
 
-# Speed Team 20191119
-- Ask for AMP files.
-
-
 # IT/Support Ops 20191119
 Tasks
 - CRM enable/disable Sterling goes to an error page?
 - Test SSO page that includes new chatroom button. Already made one?
 - Create Chatroom beta links like https://www.warriortrading.com/chat-room-access-20191021/
-
-
-# @ Bill 201920
-Tasks
-- Push notification from CRM?
-- 
-
 
 
 
