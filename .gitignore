@@ -2,7 +2,7 @@
 /learning/react-complete-guide/node_modules
 /learning/react-playlist/node_modules
 
-# Cache
+# Vim Cache
 .*.sw?
 
 # Contains random files.
