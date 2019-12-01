@@ -13,4 +13,3 @@ export EDITOR=vim
 
 # Make git a bit easier.
 alias g="git add . && git commit -m 'Made changes.' && git push"
-
