@@ -109,15 +109,6 @@ Notes
 - Ping Sean on WT PHP7
 
 
-# Speed Team 20191105
-Notes
-- Create Sean login on CRM staging.
-- Carina & Gavin
-- Ask BarryH if he has script
-- AMP fonts need to be absolute called.
-- 
- 
-
 # IT Meeting Ops 20191107
 Tasks
 - Let Sean know about WTN K8s
@@ -139,7 +130,7 @@ Tasks
 
 # Marketing Ops 20191113
 Tasks
-- Coupon codes.
+- Done: Coupon codes.
 - Test Warrior Pro Payment Plans December
 - Alternative to WebinarJam
   - Markedo
@@ -158,14 +149,6 @@ Tasks
 - Agenda for next Wednesday
 
 
-# BillS 1:1 20191118
-Agenda
-- WTN Autoscaling
-- WTM PHP 7
-- Thursday-Sunday PTO
-Notes
-- 
-
 # IT/Support Ops 20191119
 Tasks
 - CRM enable/disable Sterling goes to an error page?
@@ -173,6 +156,24 @@ Tasks
 - Create Chatroom beta links like https://www.warriortrading.com/chat-room-access-20191021/
 
 
+# Support Ops 20191202
+Tasks
+- Support / Marketing CRM on Monday
+- CRM -> ActiveCampaign
+- Drift - AC
+- Drift - WebinarJam
+- New Chat Beta Link
+- CS tab needs refunds
+- Order tab on a customer has the ability to delete the order?
+- Add /clear on before chatroom login (a button or something)
+- 
 
+
+# Bill 20191202
+Tasks
+- Notify Barry about SSO
+- FU w/ Joseph about AMP paper-trading
+- Memcached - Build one
+- 
 
 
