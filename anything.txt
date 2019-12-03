@@ -1,22 +1,3 @@
-# PHP info
-- /usr/local/etc/php
-
-
-# IT Architectural 20190730
-- Check out Gatsby and put it into WP.
-- Help BarryH with WP.
-- Confluence is pushed out... to sept?
-- Automated E2E recording activities
-- 
-
-# IT Meeting 20191003
-Notes
-- API from CRM? Does it exist?
-- Done: Execution Plan for Plugins
-- Kount - Find out what happened to disable
-- Ross wants net sales?
-- 
-
 
 # IT Architectural 20191008
 Notes
@@ -137,18 +118,6 @@ Tasks
   - Webinar Ninja
 
 
-# IT Ops 20191114
-Tasks
-- WTM flowchart on AWS Fargate
-- Drift -> AC
-- Ask Sean about K8s WTN
-  - Ask BillR
-- Joseph WTS disclaimer.
-- Access report of CRM
-- Lauren CMS Nexio agreement.
-- Agenda for next Wednesday
-
-
 # IT/Support Ops 20191119
 Tasks
 - CRM enable/disable Sterling goes to an error page?
@@ -172,8 +141,16 @@ Tasks
 # Bill 20191202
 Tasks
 - Notify Barry about SSO
-- FU w/ Joseph about AMP paper-trading
+- Done: FU w/ Joseph about AMP paper-trading
 - Memcached - Build one
 - 
 
+
+# Speed Team 20191203
+Tasks
+- Penny Stock
+- Memcached
+- WBS of Gatsby of 1st Phase
+- Roll out Gatsby Homepage for pagespeed benchmarking.
+- 
 
