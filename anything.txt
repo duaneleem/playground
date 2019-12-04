@@ -154,3 +154,12 @@ Tasks
 - Roll out Gatsby Homepage for pagespeed benchmarking.
 - 
 
+
+# IT Architecture 20191203
+Tasks
+- Decrypt cookie and get products list.
+
+
+# Sales Ops 20191204
+Tasks
+- 
