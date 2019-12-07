@@ -160,6 +160,13 @@ Tasks
 - Decrypt cookie and get products list.
 
 
-# Sales Ops 20191204
+# IT Ops 20191205
 Tasks
+- Authorize.net to Bill R
+- Done: Delete unused RDS.
+- Pause/Unpause w/ CRM products ???
+- Report on password CRM age.
 - 
+
+
+
