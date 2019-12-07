@@ -11,5 +11,9 @@ export TERM=xterm-256color
 export LANG=en_US.UTF-8
 export EDITOR=vim
 
+# Add NVM
+export NVM_DIR=~/.nvm
+source $(brew --prefix nvm)/nvm.sh
+
 # Make git a bit easier.
 alias g="git add . && git commit -m 'Made changes.' && git push"
