@@ -15,5 +15,13 @@ export EDITOR=vim
 export NVM_DIR=~/.nvm
 source $(brew --prefix nvm)/nvm.sh
 
+# GOPATH Directory
+export GOPATH='/Users/duaneleem/go'
+export PATH="$PATH:/Users/duaneleem/go/bin"
+export GOBIN='/Users/duaneleem/go/bin'
+
+# Python 3
+export PATH="$PATH:/Users/duaneleem/Library/Python/3.7/bin"
+
 # Make git a bit easier.
 alias g="git add . && git commit -m 'Made changes.' && git push"
