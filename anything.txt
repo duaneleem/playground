@@ -162,11 +162,41 @@ Tasks
 
 # IT Ops 20191205
 Tasks
-- Authorize.net to Bill R
+- Done: Authorize.net to Bill R
 - Done: Delete unused RDS.
 - Pause/Unpause w/ CRM products ???
 - Report on password CRM age.
 - 
 
 
+# East Bay WP 20191208
+Notes
+- 
 
+
+# Bill
+Notes
+- Ask to be copied at
+  - itadmin@
+  - bill@
+  - accountspayable@
+  - Needs to be a PDF, breakdown of costs.
+- Hold off on memcache
+- 
+
+
+# Bill 20191216
+Tasks
+- Report on how to pull active subscribers via CRM.
+- Pagespeed scores between regular WP pages vs static html pages.
+- Wednesday: Deploy beta chat to specific products.
+
+
+# Speed Team 20191217
+Tasks
+- Link of Gatsby HP to team.
+
+
+# IT Architecture 20191217
+- Carina: Vimeo link showing how to use the new chatroom.
+- 
