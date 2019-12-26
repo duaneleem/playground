@@ -187,16 +187,28 @@ Notes
 
 # Bill 20191216
 Tasks
-- Report on how to pull active subscribers via CRM.
+- Done: Report on how to pull active subscribers via CRM.
 - Pagespeed scores between regular WP pages vs static html pages.
-- Wednesday: Deploy beta chat to specific products.
+- Done: Wednesday: Deploy beta chat to specific products.
 
 
-# Speed Team 20191217
-Tasks
-- Link of Gatsby HP to team.
-
-
-# IT Architecture 20191217
-- Carina: Vimeo link showing how to use the new chatroom.
+# Bill 20191223
+- Checkout Page, Coupons, Free Coupon
+- Autoplay to disable completely in Chrome?
 - 
+
+
+# IT Team 20191226
+Tasks
+- Zapier: Drift -> CF
+- WT Store Footer
+- Send URL of Gatsby S3
+- Video about Multi-Product + Product
+- Meeting w/ Alex T on CRM API
+- Send Google new AMP
+
+
+
+
+
+
