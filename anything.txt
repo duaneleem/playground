@@ -208,7 +208,48 @@ Tasks
 - Send Google new AMP
 
 
+# Support Ops 20191230
+Tasks
+- Scheduled for deletion, keep year and a day
+  - In sales, but not from download
+  - GDPR
+  - Duane / Kate / Carina / Alex T
+  - M-Th w/ Alex T for next week 1/6
+- 
+
+# Bill 20191230
+Tasks
+- Done: Ask Steph if rebill will be AE
+- Flow chart on AC tags.
+- CRM API
+  - Product list
+  - Product details
+  - Customer notes.
+  - Customer address info.
+  - 
 
 
+# Parkside Lending 20191230
+- Evolve, Hosting Company
+- Migrate to GoDaddy
+- Another email recommendation about the website / AWS
+  - Bucket of hours.
+  - Matt CEO
+  - 
 
 
+# Marketing Ops 20200102
+Tasks
+- ClickFunnels to Main Site
+  - Redirect to a custom thank-you page?
+  - Add a click event per Google?
+- Add field sync CRM + ActiveCampaign
+  - Name, Expiration Date, etc on AC instead of using tags.
+- 
+
+
+# IT Team 20200102
+Tasks
+- Team Meeting 
+- Mass update current customers to an updated product or new product.
+- 
