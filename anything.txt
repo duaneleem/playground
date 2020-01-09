@@ -253,3 +253,32 @@ Tasks
 - Team Meeting 
 - Mass update current customers to an updated product or new product.
 - 
+
+
+# Speed Team 20200107
+- Spin up test environment for gatsby
+- Load Lazy w/ Joseph
+- Env w/ Memcached
+- Follow w/ AMP
+
+
+# Marketing Ops 20200108
+- New products
+  - Keith ?
+  - 2 Weeks given
+- No Chat Products
+- 
+
+
+# Risk Ops | CDRN 20200108
+- Josh
+- Waiting on Citibank but not catching all.
+- Chase: CDRN acquired by Visa?
+  - Inheriting Visa's bin, waiting for Chase to catch up.
+  - VROL only by Visa so this will be shown soon?
+- Josh to send VIN list?
+- Josh adding wildcard descriptor for "Warrior Trading"
+- 
+
+
+
