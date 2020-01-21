@@ -281,4 +281,53 @@ Tasks
 - 
 
 
+# Support Ops 20200113
+- Jan 22nd CRM product launched
+- BillR: Anna@warriortrading.com new email
+- Service Desk: Add who the ticket is assigned to (view from Carina's)
+- Tim: Rules for auto notifications based on time.
+- Automatically add Carina to CRM / Website
+- Kate/Carina: CS Admin
+- 
+
+
+# Speed Team 20200114
+- Google AMP Course and send to everyone
+- 
+
+# Team Building 20200116
+Ideas
+- Releasing to different branches via code pipeline.
+- Support
+  - Member status: a membre or not, or previous.
+  - Product order history
+  - Product info
+  - Product purchasing API
+- CRM customer info for API
+  - Billing info
+  - Account info
+  - Everything about customer.
+- Mobile Signup
+  - Mobile specific product for mobile app registrations.
+  - 
+CRM request
+  - Block multiple 5 day trials, or a notification. 
+  - Member since field in SSO tokenization.
+  - 
+- CICD
+  - Ignore unit tests/steps if no GH repo changes.
+  - 
+- Custom price charging.
+- 
+
+
+# Frank 20200117
+- Transfer to IRA
+- Roll to another 401k
+  - 59 1/2, 10% Penalty
+- Withdrawing is taxed but NOT rolling.
+- Mutual Funds
+- Planning Document if I died or somethiing.
+  - Power of Attorney
+  - Revokable Trust
 

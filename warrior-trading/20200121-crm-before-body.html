@@ -1,0 +1,97 @@
+<script type="text/javascript">
+  ga('require', 'ecommerce');
+  ga('ecommerce:addTransaction', {
+      'id': '[orderid]',                     
+      'affiliation': 'WarriorTrading',   
+      'revenue': '[ordertotal]',
+      'coupon': '[ordercoupon]'
+  });
+  [productlist]
+  ga('ecommerce:send');
+</script>
+
+<!-- Event snippet for AdWords Conversion Pixel conversion page -->
+<script>
+  gtag('event', 'conversion', {
+    'send_to': 'AW-994992245/so7cCLWUzngQ9cC52gM',
+    'value': [ordertotal],
+    'currency': 'USD',
+    'transaction_id': '[orderid]'
+  });
+</script>
+
+<!-- Twitter universal website tag code --> 
+<script> 
+  !function(e,t,n,s,u,a){e.twq||(s=e.twq=function(){s.exe?s.exe.apply(s,arguments):s.queue.push(arguments); 
+  },s.version='1.1',s.queue=[],u=t.createElement(n),u.async=!0,u.src='//static.ads-twitter.com/uwt.js', 
+  a=t.getElementsByTagName(n)[0],a.parentNode.insertBefore(u,a))}(window,document,'script'); 
+  twq('init','nvlo9'); 
+  twq('track','Purchase', { 
+      value: [ordertotal], 
+      currency: 'USD', 
+      num_items: '1', 
+      order_id: '[orderid]' 
+  }); 
+</script> 
+<!-- End Twitter universal website tag code --> 
+
+<script src="//platform.twitter.com/oct.js" type="text/javascript"></script> 
+<script type="text/javascript">twttr.conversion.trackPid('[nvlo9]', {tw_sale_amount: [ordertotal], tw_order_quantity: 1 });</script> 
+<noscript> 
+  <img height="1" width="1" style="display:none;" alt=" " src="https://analytics.twitter.com/i/adsct?txn_id=[nvlo9]&p_id=Twitter$tw_sale_amount=[ordertotal]&tw_order_quantity=1" /> 
+  <img height="1" width="1" style="display:none;" alt=" " src="//t.co/i/adsct?txn_id=[Insert Tag ID Here]&p_id=Twitter$tw_sale_amount=0&tw_order_quantity=0" /> 
+</noscript> 
+
+
+<!-- Yahoo -->
+<script type="application/javascript">
+  window.dotq = window.dotq || [];
+  window.dotq.push({
+    'projectId': '10001234567890',
+    'properties': {
+      'pixelId': '654321',
+      'qstrings': {
+        'et': 'custom',
+        'ec': 'shopping',
+        'ea': 'purchase',
+        'el': 'purchase',
+        'ev': 'purchase',
+        'gv': '[ordertotal]'
+      }
+    }
+  });
+</script>
+
+<!-- BING -->
+<script>
+  window.uetq = window.uetq || [];
+  window.uetq.push({ 'gv': [ordertotal], 'gc': 'USD' });
+</script>
+
+<script>
+  window.uetq = window.uetq || [];
+  window.uetq.push('event', '', {[ordertotal]: GetRevenueValue(), 'currency': 'USD'});  
+</script>
+
+<script>
+  fbq('track', 'Purchase', {
+    value: [ordertotal],
+    currency: 'USD'
+  });
+</script>
+
+
+<script>
+  rdt('track', 'Purchase');
+</script>
+
+<!-- Tag Manager -->
+<script>
+	window.dataLayer = window.dataLayer || [];
+	window.dataLayer.push({
+		'value': [ordertotal],
+		'currency': 'USD',
+		'testing': 'FOO',
+		'transaction_id': '[orderid]'
+	});
+</script>
