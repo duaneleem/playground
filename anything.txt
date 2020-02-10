@@ -330,4 +330,124 @@ CRM request
 - Planning Document if I died or somethiing.
   - Power of Attorney
   - Revokable Trust
+  - $2500 investment for this service.
 
+# IT Architect 20200121
+- API Gateway
+- Hydra Authentication
+- Traffik works w/ K8s
+- Java Springboot
+- Freshdesk, AC, CRM
+  - Using NodeJS call out to these.
+- FeathersJS
+- NodeJS http
+  - kaoJS
+- Generation API keys from AC / Freshdesk
+- 
+
+
+- Local by Flywheel
+- NGINX on the frontend?
+- New Relic
+- 
+
+# Sales Ops 20200122
+Questions
+- AC tags?
+- 
+Notes
+- Possible for 01/28?
+- Meta Menu
+- 
+Tasks
+- Done: Reenable for NYE40 Thurs/Fri through 01/28
+- Update current chat checkout
+- Done: Virtual Seat WP permissions.
+  - 199194 
+  - IC2019VS AC
+  - WP already permissioned.
+- Redirect to landing page after checkout.
+- 
+
+# Sterling Ops 20200123
+- Jim joining next week about "magic list" from Florida.
+- Chart outage
+  - Hardware installed, testing done.
+  - No client in that and Jim to give ETA
+- Margin Tiers
+  - Not enabled on new accounts.
+  - Still have 4x buying power.
+- Metrics
+  - 
+
+# IT Team 20200123
+- Sandbox env creds and prod env creds for AC
+  - Steph for creds
+  - Find out requirements on new dashboard.
+  - I need to be working with AC for API keys.
+  - Ask Joseph instead AC
+- Bill R on Freshdesk
+- 
+
+# Support Ops 20200127
+- Authorize.net on New Store
+  - End of February?
+- 
+
+# Ticker.tv 20200128
+- Get fields from users.
+  - Username
+  - Email
+- Logs, IP
+- Cookie values
+- Payment Gateway per product.
+- 
+
+# Speed Team 20200128
+- Alternative Rollback
+- 7pm Thursday Next Week
+- Tutorial AMP from Charleene
+- Adsense Status
+- 
+
+# IT Infrastructure 20200128
+- chatroom-service-messag, chatroom-service-classroom
+- 
+
+# Sales Ops 20200129
+- Chatroom landing page verbiages need update.
+- Dashboard verbiages
+- Joseph: Sidebar graphic from Joseph for checkout
+- Joseph: Chat icons for product
+
+# IT Ops 20200130
+- API for Learning Path on Monday
+- CRM: better interaction of CRM products to decrease need for manual adjustments
+  - Another status other than paused?
+- CRM: permissioned checkout pages?
+- LMS sandbox for Joseph
+- Categories through Rest API
+- Lifecycle Manager for Ticker.tv
+- 
+
+# Speed Team 20200204
+- Wicked Folders
+-
+ 
+# Sales Ops 20200205
+- Futures
+  - Update Dashboard
+- WP Mega Menu
+- 
+
+# Risk Ops 20200205
+- Exclusion from Load Balancer
+- 10% to CMS on Monday, 90% to Braintree
+- 
+-
+
+# Marketo 20200205
+- CRM API
+  - Customer Orders
+-   
+ 
