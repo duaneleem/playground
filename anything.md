@@ -446,8 +446,114 @@ Tasks
 - 
 -
 
-# Marketo 20200205
-- CRM API
-  - Customer Orders
--   
- 
+# Support Ops 20200210
+- Arsh options watchlist
+- Old Chat
+  - Move below New Chat
+  - New Words: Enter the Old Small Cap Trading Room 
+-  
+
+# Speed Team 20200211
+- Env for mega menu.
+- 
+
+Winston
+- AWS Firehose
+- 
+
+# IT Team 20200213
+- Read Only access for Joseph
+- Read over CRM API doc.
+- 
+
+# IT Team 20200218
+- Sandbox AC / Freshdesk
+- 
+
+# Sales Ops 20200219
+- Ross: Login Follow Up w/ Joseph
+- Steph: Lists chat chat
+- 
+
+# Open Enrollment
+- Darcy Ricker, Trinet
+- TriNet Mobile App
+- Download Aetna Summary of Benefits and Coverage (SBC)
+- 
+
+
+# ATI 20200228
+- WT Dashboard "Manage Button" Toggle
+  - Done
+- CRM Password-less Checkout?
+  - Facebook/Google/etc
+  - Email Link
+  - Alternatives?
+  - Solutions
+    - Pay first, then ask for email
+    - Confirm Email, Password, Confirm Password
+
+# Support 20200309
+- Product Sales
+  - Expiration
+- Order/data changes by admins/customers
+- 
+
+
+Speed Team 20200310
+- CloudWatch + RedShift?
+- Ticker.tv
+  - Spin up dev server
+
+
+Marketo 20200311
+- Kevin Jedreski for technical questions
+- Q: Import into Marketo?
+- Q: Variables in CRM?
+- Launch Pack
+  - Core Concepts | Training
+- Marketo.com/education
+- Webinars: nation.marketo.com/docs/DOC-4312
+- Core Concepts | Data Model
+- 
+
+Sterling Ops 20200312
+- Send Sterling API delete call once a month... or two?
+- deletion on update API? look sterling
+
+
+CRM Ops 20200319
+Agenda
+- Updating current SQL server size.
+- Replication
+  - Once/hour, every other hour, or 2 times a day?
+  - All customer info, except billing, secret info such as password, etc.
+
+
+IAHSP EU
+- Forum
+- Events / Calendar
+- New Website Design
+- 1 year or...
+  - 2 year.. less
+  - Program ahead of team to have 2 years if leadership wants.
+- Wireframe / UX of new IAHSP Europe
+- Include info@iahspeurope.com
+- Member Directory
+  - Add Country
+  - First Name, Last Name, City, Country
+  - Landing Page
+
+
+Support Ops 20200504
+- Button for Receipt
+- Checkout on PayPal
+- From Safari, send to support article
+- 
+
+
+# Support Ops 20200518
+- 
+
+
+

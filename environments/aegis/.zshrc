@@ -23,5 +23,8 @@ export GOBIN='/Users/duaneleem/go/bin'
 # Python 3
 export PATH="$PATH:/Users/duaneleem/Library/Python/3.7/bin"
 
+# JMeter
+export PATH="$PATH:/Users/duaneleem/Applications/apache-jmeter-5.2.1/bin"
+
 # Make git a bit easier.
 alias g="git add . && git commit -m 'Made changes.' && git push"
