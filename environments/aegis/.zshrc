@@ -20,7 +20,8 @@ export GOPATH='/Users/duaneleem/go'
 export PATH="$PATH:/Users/duaneleem/go/bin"
 export GOBIN='/Users/duaneleem/go/bin'
 
-# Python 3
+# Python 2 and 3
+export PATH="$PATH:/Users/duaneleem/Library/Python/2.7/bin"
 export PATH="$PATH:/Users/duaneleem/Library/Python/3.7/bin"
 
 # JMeter

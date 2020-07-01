@@ -545,15 +545,7 @@ IAHSP EU
   - Landing Page
 
 
-Support Ops 20200504
-- Button for Receipt
-- Checkout on PayPal
-- From Safari, send to support article
-- 
-
-
-# Support Ops 20200518
-- 
-
+# Marketo Ops 20200602
+- DB: Person, Order, Products
 
 
