@@ -548,5 +548,12 @@ IAHSP EU
 # Marketo Ops 20200602
 - DB: Person, Order, Products
 
-# 
+# Marketo - Steph
+https://secure.warriortrading.com/ati_pro/ati_merchant/admin/customers/details.aspx?id=339825
+https://app-sj32.marketo.com/leadDatabase/loadLeadDetail?leadId=970751
+
+if at least one product from a given order is active, display the active/completed/failed
+
+# IAHSP
+- Voting WP plugin and shows a ticker.
 
