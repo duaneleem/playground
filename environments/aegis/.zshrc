@@ -30,3 +30,13 @@ export PATH="$PATH:/Users/duaneleem/Applications/apache-jmeter-5.2.1/bin"
 
 # Make git a bit easier.
 alias g="git add . && git commit -m 'Made changes.' && git push"
+
+# Kubernetes
+## setup autocomplete in zsh into the current shell
+source <(kubectl completion zsh)
+## add autocomplete permanently to your zsh shell
+echo "[[ $commands[kubectl] ]] && source <(kubectl completion zsh)" >> ~/.zshrc
+
+## You can also use a shorthand alias for kubectl that also works with completion:
+alias k=kubectl
+complete -F __start_kubectl k
