@@ -1,3 +1,3 @@
-AWS_ACCESS_KEY = ""
+AWS_ACCESS_KEY = "test"
 AWS_SECRET_KEY = ""
 AWS_REGION = ""
