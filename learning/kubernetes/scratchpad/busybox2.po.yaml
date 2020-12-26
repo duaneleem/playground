@@ -3,8 +3,8 @@ kind: Pod
 metadata:
   creationTimestamp: null
   labels:
-    run: busybox
-  name: busybox
+    run: busybox2
+  name: busybox2
 spec:
   volumes:
     - name: task-pv-storage
@@ -16,7 +16,7 @@ spec:
     - -c
     - sleep 3600
     image: busybox
-    name: busybox
+    name: busybox2
     volumeMounts:
         - mountPath: "/etc/foo"
           name: task-pv-storage
