@@ -6,17 +6,14 @@ metadata:
     run: busybox
   name: busybox
 spec:
-  volumes:
-    - name: task-pv-storage
-      persistentVolumeClaim:
-        claimName: mypvc
   containers:
   - args:
     - /bin/sh
     - -c
-    - sleep 3600
+    - notexist
     image: busybox
     name: busybox
-    volumeMounts:
-        - mountPath: "/etc/foo"
-          name: task-pv-storage
+    resources: {}
+  dnsPolicy: ClusterFirst
+  restartPolicy: Never
+status: {}
