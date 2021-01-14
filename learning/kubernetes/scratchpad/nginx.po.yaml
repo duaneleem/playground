@@ -7,12 +7,17 @@ metadata:
   name: nginx
 spec:
   containers:
-  - env:
-    - name: var1
-      value: val1
-    image: nginx
+  - image: nginx
     name: nginx
-    resources: {}
-  dnsPolicy: ClusterFirst
-  restartPolicy: Never
-status: {}
+    livenessProbe:
+      exec:
+        command:
+        - ls
+      initialDelaySeconds: 5
+      periodSeconds: 5
+    readinessProbe:
+      httpGet:
+        path: /
+        port: 80
+
+
