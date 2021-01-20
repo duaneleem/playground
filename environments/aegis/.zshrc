@@ -35,7 +35,8 @@ alias g="git add . && git commit -m 'Made changes.' && git push"
 ## setup autocomplete in zsh into the current shell
 source <(kubectl completion zsh)
 ## add autocomplete permanently to your zsh shell
-echo "[[ $commands[kubectl] ]] && source <(kubectl completion zsh)" >> ~/.zshrc
+# echo "[[ $commands[kubectl] ]] && source <(kubectl completion zsh)" >> ~/.zshrc
+[[ /usr/local/bin/kubectl ]] && source <(kubectl completion zsh)
 
 ## You can also use a shorthand alias for kubectl that also works with completion:
 alias k=kubectl
