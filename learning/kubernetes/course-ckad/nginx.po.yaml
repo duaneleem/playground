@@ -8,9 +8,12 @@ spec:
   containers:
   - image: nginx
     name: nginx
-    readinessProbe:
-      httpGet:
-        path: /
-        port: 80
-      initialDelaySeconds: 5
-      periodSeconds: 5
+    volumeMounts:
+      - name: config-volume
+        mountPath: /etc/lala
+  volumes:
+    - name: config-volume
+      configMap:
+        # Provide the name of the ConfigMap containing the files you want
+        # to add to the container
+        name: cmvolume
