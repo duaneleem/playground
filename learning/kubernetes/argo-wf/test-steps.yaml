@@ -1,0 +1,43 @@
+# https://argoproj.github.io/argo-workflows/examples/#steps
+
+apiVersion: argoproj.io/v1alpha1
+kind: Workflow
+metadata:
+  generateName: test-steps
+  # namespace: test
+spec:
+  entrypoint: write-lines
+
+  templates:
+  - name: write-lines
+    steps:
+    - - name: line1
+        template: the-worker
+        arguments:
+          parameters:
+          - name: text
+            value: "1st line"
+    - - name: line2
+        template: the-worker
+        arguments:
+          parameters:
+          - name: text
+            value: "2nd line"
+    - - name: line3
+        template: the-worker
+        arguments:
+          parameters:
+          - name: text
+            value: "3rd line"
+
+  - name: the-worker
+    inputs:
+      parameters:
+      - name: text
+    container:
+      image: busybox
+      command: ["/bin/sh", "-c"]
+      args: ["echo '{{inputs.parameters.text}}'"]
+        
+
+
