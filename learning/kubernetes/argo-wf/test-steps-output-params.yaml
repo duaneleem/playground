@@ -1,0 +1,65 @@
+# https://argoproj.github.io/argo-workflows/examples/#steps
+# https://argoproj.github.io/argo-workflows/examples/#output-parameters
+# 
+# To run this: argo submit -n argo --watch test-steps-output-params.yaml
+
+apiVersion: argoproj.io/v1alpha1
+kind: Workflow
+metadata:
+  generateName: test-steps-output-params
+spec:
+  entrypoint: write-lines
+
+  templates:
+  - name: write-lines
+    steps:
+    - - name: line1
+        template: the-worker
+        arguments:
+          parameters:
+          - name: text
+            value: "1st line"
+    - - name: line2
+        template: the-worker
+        arguments:
+          parameters:
+          - name: text
+            value: "{{steps.line1.outputs.parameters.results-param}}\n2nd line"
+    - - name: line3
+        template: the-worker
+        arguments:
+          parameters:
+          - name: text
+            value: "{{steps.line2.outputs.parameters.results-param}}\n3rd line"
+    - - name: output
+        template: the-output
+        arguments:
+          parameters:
+          - name: text
+            value: "{{steps.line3.outputs.parameters.results-param}}"
+
+  - name: the-worker
+    inputs:
+      parameters:
+      - name: text
+    container:
+      image: busybox
+      command: ["/bin/sh", "-c"]
+      args: ["echo '{{inputs.parameters.text}}' > /tmp/results.txt"]
+    outputs:
+      parameters:
+      - name: results-param
+        valueFrom:
+          path: /tmp/results.txt
+  
+  - name: the-output
+    inputs:
+      parameters:
+      - name: text
+    container:
+      image: busybox
+      command: ["/bin/sh", "-c"]
+      args: ["echo '{{inputs.parameters.text}}'"]
+        
+
+
