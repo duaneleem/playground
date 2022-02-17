@@ -50,5 +50,6 @@
     "type_traits": "cpp",
     "typeinfo": "cpp",
     "utility": "cpp"
-  }
+  },
+  "terminal.integrated.fontFamily": "MesloLGS NF"
 }
