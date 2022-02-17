@@ -1,0 +1,17 @@
+version: "3.9"
+services:
+  personal-jupyter:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    volumes:
+      - "${ONEDRIVE_NOTES}:/home/jovyan/notes"
+      - "${UDACITY_AI_TRADING}:/home/jovyan/udacity-ai-trading"
+    restart: always
+    environment:
+      JUPYTER_ENABLE_LAB: 'yes'
+    ports:
+      - "10000:8888"
+
+
+

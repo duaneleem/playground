@@ -1,0 +1,45 @@
+version: '3'
+
+services:
+  pneuma-db:
+    container_name: pneuma-db
+    image: mysql:5.7
+    volumes:
+      - pneuma_db_data:/var/lib/mysql
+    ports:
+      - "3306:3306"
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: ${PNEUMA_MYSQL_ROOT_PASSWORD}
+      MYSQL_DATABASE: ${PNEUMA_MYSQL_DATABASE}
+      MYSQL_USER: ${PNEUMA_MYSQL_USER}
+      MYSQL_PASSWORD: ${PNEUMA_MYSQL_PASSWORD}
+
+  pneuma-phpmyadmin:
+    image: phpmyadmin
+    restart: always
+    container_name: pneuma-phpmyadmin
+    ports:
+    - 3801:80
+    environment:
+      PMA_ARBITRARY: 1
+
+  pneuma-adminer:
+    image: adminer
+    restart: always
+    container_name: pneuma-mysql-adminer
+    ports:
+      - 3802:8080
+    # mem_limit: 2G
+    environment:
+      ADMINER_DESIGN: 'nette'
+    volumes:
+      - './artifacts/0-upload_large_dumps.ini:/usr/local/etc/php/conf.d/0-upload_large_dumps.ini'
+
+volumes:
+  pneuma_db_data:
+
+networks:
+  default:
+    external: true
+    name: 'development'
