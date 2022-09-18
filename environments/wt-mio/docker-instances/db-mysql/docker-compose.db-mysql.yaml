@@ -1,3 +1,8 @@
+# Creates MySQL for Mio
+#
+# docker compose -f docker-compose.db-mysql.yaml down
+# docker compose -f docker-compose.db-mysql.yaml up -d
+
 version: '3.1'
 
 services:
@@ -27,7 +32,7 @@ services:
     environment:
       ADMINER_DESIGN: 'nette'
     volumes:
-      - '../../artifacts/app-adminer/0-upload_large_dumps.ini:/usr/local/etc/php/conf.d/0-upload_large_dumps.ini'
+      - './artifacts/app-adminer/0-upload_large_dumps.ini:/usr/local/etc/php/conf.d/0-upload_large_dumps.ini'
 
   phpmyadmin:
     image: phpmyadmin
