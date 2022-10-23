@@ -1,4 +1,6 @@
-version: '3'
+# Docs: https://hub.docker.com/_/phpmyadmin
+
+version: '3.1'
 
 services:
   pneuma-db:
@@ -23,6 +25,7 @@ services:
     - 3801:80
     environment:
       PMA_ARBITRARY: 1
+      UPLOAD_LIMIT: 25G
 
   pneuma-adminer:
     image: adminer
