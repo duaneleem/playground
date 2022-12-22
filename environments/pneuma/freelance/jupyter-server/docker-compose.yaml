@@ -5,8 +5,9 @@ services:
       context: ./
       dockerfile: Dockerfile
     volumes:
-      - "${ONEDRIVE_NOTES}:/home/jovyan/notes"
-      - "${UDACITY_AI_TRADING}:/home/jovyan/udacity-ai-trading"
+      # - "${ONEDRIVE_NOTES}:/home/jovyan/notes"
+      # - "${UDACITY_AI_TRADING}:/home/jovyan/udacity-ai-trading"
+      - "${GH_RESEARCH}:/home/jovyan/research"
     restart: always
     environment:
       JUPYTER_ENABLE_LAB: 'yes'
