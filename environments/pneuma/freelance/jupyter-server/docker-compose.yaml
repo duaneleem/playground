@@ -7,6 +7,7 @@ services:
     volumes:
       # - "${ONEDRIVE_NOTES}:/home/jovyan/notes"
       # - "${UDACITY_AI_TRADING}:/home/jovyan/udacity-ai-trading"
+      - "${DIR_LEVELUP}:/home/jovyan/levelup"
       - "${GH_RESEARCH}:/home/jovyan/research"
     restart: always
     environment:
