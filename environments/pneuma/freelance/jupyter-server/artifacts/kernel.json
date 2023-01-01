@@ -1,0 +1,15 @@
+{
+  "py38": {
+    "argv": ["python", "-m", "mymodule1", "--arg1", "value1"],
+    "display_name": "Python (3.8)",
+    "language": "python",
+    "prefix": "/opt/conda/envs/py38"
+  },
+  "py37": {
+    "argv": ["python", "-m", "mymodule2", "--arg2", "value2"],
+    "display_name": "Python (3.7)",
+    "language": "python",
+    "prefix": "/opt/conda/envs/py37"
+  }
+}
+
