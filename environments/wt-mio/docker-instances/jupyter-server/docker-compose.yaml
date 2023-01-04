@@ -1,0 +1,35 @@
+version: "3.9"
+services:
+  personal-jupyter:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    user: root
+    volumes:
+      # - "${ONEDRIVE_NOTES}:/home/jovyan/notes"
+      # - "${UDACITY_AI_TRADING}:/home/jovyan/udacity-ai-trading"
+      - "${MARKETO_CRM_NOTEBOOKS}:/home/mio/marketo-crm"
+    restart: always
+    environment:
+      JUPYTER_ENABLE_LAB: 'yes'
+      NB_USER: mio
+      NB_UID: "${PROJECT_NB_UID}"
+      NB_GID: "${PROJECT_NB_GID}"
+      CHOWN_HOME: 'yes'
+      CHOWN_HOME_OPTS: -R
+
+      # Warrior Trading
+      MARKETO_REST_URL: "${MARKETO_REST_URL_WT}"
+      MARKETO_CLIENT_ID: "${MARKETO_CLIENT_ID_WT}"
+      MARKETO_CLIENT_SECRET: "${MARKETO_CLIENT_SECRET_WT}"
+
+      # Day Trade Dash
+      MARKETO_REST_URL_DTD: "${MARKETO_REST_URL_DTD}"
+      MARKETO_CLIENT_ID_DTD: "${MARKETO_CLIENT_ID_DTD}"
+      MARKETO_CLIENT_SECRET_DTD: "${MARKETO_CLIENT_SECRET_DTD}"
+      
+    ports:
+      - "10000:8888"
+
+
+

@@ -1,0 +1,54 @@
+# Creates MySQL for Mio
+#
+# docker compose -f docker-compose.db-mysql.yaml down
+# docker compose -f docker-compose.db-mysql.yaml up -d
+
+version: '3.1'
+
+services:
+  db-mysql:
+    image: mysql:8.0
+    restart: always
+    # network_mode: bridge
+    command: --default-authentication-plugin=mysql_native_password
+    container_name: db-mysql
+    volumes:
+      - db-mysql:/var/lib/mysql
+    ports:
+      - '${WT_MIO_MYSQL_PORT}:3306'
+    environment:
+      MYSQL_ROOT_PASSWORD: ${WT_MIO_MYSQL_ROOT_PASSWORD}
+  
+  adminer:
+    image: adminer
+    restart: always
+    container_name: db-mysql-adminer
+    # network_mode: bridge
+    links:
+      - 'db-mysql:db'
+    ports:
+      - 8181:8080
+    # mem_limit: 2G
+    environment:
+      ADMINER_DESIGN: 'nette'
+    volumes:
+      - './artifacts/app-adminer/0-upload_large_dumps.ini:/usr/local/etc/php/conf.d/0-upload_large_dumps.ini'
+
+  phpmyadmin:
+    image: phpmyadmin
+    restart: always
+    container_name: db-mysql-phpmyadmin
+    links:
+      - 'db-mysql:db'
+    ports:
+      - 8182:80
+    environment:
+      PMA_ARBITRARY: 1
+
+networks:
+  default:
+    external: true
+    name: ${DOCKER_NETWORK}
+
+volumes:
+  db-mysql:
