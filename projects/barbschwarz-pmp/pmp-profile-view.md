@@ -73,13 +73,24 @@
   }
 
   /* Display line-breaks for barb_overview */
-  #pmpro_member_profile-1 > p.pmpro_member_directory_barb_overview {
-    white-space: pre-wrap;
-  }
+  [class*="pmpro_member_profile"] > p.pmpro_member_directory_barb_overview { white-space: pre-line; }
 
-  #pmpro_member_profile-1 > p.pmpro_member_directory_bio {
+  [class*="pmpro_member_profile"] > p.pmpro_member_directory_bio {
     white-space: pre-line;
   }
+
+  [class*="pmpro_member_profile"] > p.pmpro_member_directory_barb_overview {
+    white-space: pre-line;
+  }
+
+  /* --------------------------------------------------------------------------------------------------
+    Portfolio: Image Gallery
+  --------------------------------------------------------------------------------------------------*/
+  /* Image 1 */
+  [class*="pmpro_member_profile"] > [class*="pmpro_member_directory_barb_portfolio"] > strong { display: none; }
+  #content > div > div > div > div.is-layout-flex.wp-container-8.wp-block-columns > div:nth-child(1) > p { display: none; }
+  .pmpro_member_profile .pmpromd_filename { display: none; }
+  .pmpro_actions_nav { display: none; }
   
 </style>
 
@@ -89,6 +100,7 @@
 # PMP Shortcode
 ```sh
 # https://www.barbschwarz.com/membership-account/profile/ritademiranda/
-[pmpro_member_profile show_email="false" show_level="false" show_startdate="false" avatar_size="256" show_bio="true" fields="Country,barb_country;Professional Category,barb_professional_category;Title,barb_title;Company,barb_company;Education,education;Portfolio,barb_pod_images"]
+[pmpro_member_profile show_email="false" show_level="false" show_startdate="false" avatar_size="256" show_bio="false" fields="Overview,barb_overview;Country,barb_country;Professional Category,barb_professional_category;Title,barb_title;Company,barb_company;Education,education;Video,barb_pods_video;"]
+
 ```
 
