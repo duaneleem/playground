@@ -83,6 +83,16 @@
     white-space: pre-line;
   }
 
+  /* Publications */
+  [class*="pmpro_member_profile"] > p.pmpro_member_directory_barb_publications {
+    white-space: pre-line;
+  }
+
+  /* Education */
+  [class*="pmpro_member_profile"] > p.pmpro_member_directory_education {
+    white-space: pre-line;
+  }
+
   /* --------------------------------------------------------------------------------------------------
     Portfolio: Image Gallery
   --------------------------------------------------------------------------------------------------*/
@@ -100,7 +110,7 @@
 # PMP Shortcode
 ```sh
 # https://www.barbschwarz.com/membership-account/profile/ritademiranda/
-[pmpro_member_profile show_email="false" show_level="false" show_startdate="false" avatar_size="256" show_bio="false" fields="Overview,barb_overview;Country,barb_country;Professional Category,barb_professional_category;Title,barb_title;Company,barb_company;Education,education;Video,barb_pods_video;"]
+[pmpro_member_profile show_email="true" show_level="false" show_startdate="false" avatar_size="256" show_bio="false" show_billing="false" show_phone="false" fields="Overview,barb_overview;Publications,barb_publications;Country,barb_country;Professional Category,barb_professional_category;Title,barb_title;Company,barb_company;Education,education;Experience,barb_experience;Video,barb_pods_video;"]
 
 ```
 
