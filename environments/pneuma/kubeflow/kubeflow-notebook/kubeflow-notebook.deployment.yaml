@@ -1,0 +1,35 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: kubeflow-notebook
+  namespace: dev
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: kubeflow-notebook
+  template:
+    metadata:
+      labels:
+        app: kubeflow-notebook
+    spec:
+      containers:
+      - name: kubeflow-notebook
+        image: public.ecr.aws/j1r0q0g6/notebooks/notebook-servers/jupyter-tensorflow-full:v1.5.0
+        ports:
+        - containerPort: 8888
+        env:
+        - name: NB_PREFIX
+          value: "./data"
+        securityContext:
+          runAsUser: 1000
+          runAsGroup: 1000
+        volumeMounts:
+        - name: my-pvc
+          mountPath: /home/jovyan
+      volumes:
+      - name: kfnlocal
+        hostPath:
+          path: ./data
+          type: directory
+
