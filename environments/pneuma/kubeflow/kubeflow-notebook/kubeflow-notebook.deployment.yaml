@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: kubeflow-notebook
+  name: pneuma-kubeflow-notebook
   namespace: dev
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: kubeflow-notebook
+      app: pneuma-kubeflow-notebook
   template:
     metadata:
       labels:
-        app: kubeflow-notebook
+        app: pneuma-kubeflow-notebook
     spec:
       containers:
-      - name: kubeflow-notebook
+      - name: pneuma-kubeflow-notebook
         image: public.ecr.aws/j1r0q0g6/notebooks/notebook-servers/jupyter-tensorflow-full:v1.5.0
         ports:
         - containerPort: 8888
@@ -28,8 +28,7 @@ spec:
         - name: my-pvc
           mountPath: /home/jovyan
       volumes:
-      - name: kfnlocal
-        hostPath:
-          path: ./data
-          type: directory
+      - name: my-pvc
+        persistentVolumeClaim:
+          claimName: my-pvc-claim
 
