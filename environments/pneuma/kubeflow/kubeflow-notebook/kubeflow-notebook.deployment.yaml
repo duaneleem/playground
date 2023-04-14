@@ -4,7 +4,7 @@ metadata:
   name: pneuma-kubeflow-notebook
   namespace: dev
 spec:
-  replicas: 3
+  replicas: 1
   selector:
     matchLabels:
       app: pneuma-kubeflow-notebook
@@ -21,14 +21,14 @@ spec:
         env:
         - name: NB_PREFIX
           value: "./data"
-        securityContext:
-          runAsUser: 1000
-          runAsGroup: 1000
+        #securityContext:
+        #  runAsUser: 1000
+        #  runAsGroup: 1000
         volumeMounts:
-        - name: my-pvc
+        - name: pneuma-kubeflow-pvc
           mountPath: /home/jovyan
       volumes:
-      - name: my-pvc
+      - name: pneuma-kubeflow-pvc
         persistentVolumeClaim:
-          claimName: my-pvc-claim
+          claimName: pneuma-kubeflow-pvc
 
