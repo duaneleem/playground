@@ -22,5 +22,5 @@ spec:
           values:
           - kubeflow
   claimRef:
-    namespace: dev
     name: pneuma-kubeflow-notebook-pvc
+    namespace: dev

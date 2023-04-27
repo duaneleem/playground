@@ -30,5 +30,5 @@ spec:
       volumes:
       - name: pneuma-kubeflow-pvc
         persistentVolumeClaim:
-          claimName: pneuma-kubeflow-pvc
+          claimName: pneuma-kubeflow-notebook-pvc
 
