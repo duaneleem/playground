@@ -8,30 +8,18 @@ nnoremap <C-b> <C-b>
 " Disable Default VIM Mode and Other Settings
 " ===========================================================
 set nocompatible
+" set mouse=
 filetype off
-
-
-" ===========================================================
-" Check for vim color dir, create if it doesnt exist.
-" ===========================================================
-if empty(glob('~/.config/nvim/colors/g16.vim'))
-  silent !mkdir ~/.config/nvim/colors
-  silent !ln -s ${DUANELEEM_GH_PLAYGROUND }/environments/wt-mio/artifacts/shell-neovim/colors/g16.vim ~/.config/nvim/colors/g16.vim
-  silent !ln -s ${DUANELEEM_GH_PLAYGROUND }/environments/wt-mio/artifacts/shell-neovim/colors/gRetroWave16.vim ~/.config/nvim/colors/gRetroWave16.vim
-endif
-
-if empty(glob('~/.config/nvim/colors/g16.vim'))
-  silent !ln -s ${DUANELEEM_GH_PLAYGROUND}/environments/wt-mio/artifacts/shell-neovim/colors/g16.vim ~/.config/nvim/colors/g16.vim
-  silent !ln -s ${DUANELEEM_GH_PLAYGROUND}/environments/wt-mio/artifacts/shell-neovim/colors/gRetroWave16.vim ~/.config/nvim/colors/gRetroWave16.vim
-endif
 
 
 " ===========================================================
 " Initialize vim-plug
 " ===========================================================
+
 call plug#begin('~/.config/nvim/plugged')
 
 " Add plugins here
+Plug 'catppuccin/nvim', { 'as': 'catppuccin' }
 Plug 'tpope/vim-sensible'
 Plug 'preservim/nerdtree'
 
@@ -45,15 +33,30 @@ call plug#end()
 
 
 " ===========================================================
-" BarBar Settings: BarBar
+" Settings: catppuccin
+" ===========================================================
+colorscheme catppuccin " catppuccin-latte, catppuccin-frappe, catppuccin-macchiato, catppuccin-mocha
+
+
+" ===========================================================
+" Settings: BarBar
 " ===========================================================
 nnoremap <silent>    <A-,> <Cmd>BufferPrevious<CR>
 nnoremap <silent>    <A-.> <Cmd>BufferNext<CR>
 
 
 " ===========================================================
+" Settings: NVIM Overrides
+" ===========================================================
+nnoremap gt :BufferNext<CR>
+nnoremap gT :BufferPrevious<CR>
+
+
+" ===========================================================
 " Settings: NERDTree
 " ===========================================================
+" Exit Vim if NERDTree is the only window remaining in the only tab.
+autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | call feedkeys(":quit\<CR>:\<BS>") | endif
 nnoremap <C-t> :NERDTreeToggle<CR>
 
 
