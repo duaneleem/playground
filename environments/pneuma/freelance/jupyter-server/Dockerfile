@@ -1,4 +1,4 @@
-FROM jupyter/datascience-notebook:python-3.9.6
+FROM jupyter/datascience-notebook:python-3.10
 
 ## Install Python Deps for Freestyle38
 RUN pip3 install \

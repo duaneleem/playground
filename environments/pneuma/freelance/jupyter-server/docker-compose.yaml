@@ -1,3 +1,14 @@
+# Jupyter Notebook to develop applications such as ML projects.
+#
+# @author Duane Leem <duane@leemfamily.com>
+# @version 20240710
+#
+# Build command:
+# docker compose down && docker compose up -d
+#
+# Build command if Dockerfile has changed:
+# docker compose down && docker compose up -d --build
+
 version: "3.9"
 services:
   personal-jupyter:

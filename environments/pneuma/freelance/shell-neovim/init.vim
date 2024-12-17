@@ -37,8 +37,22 @@ Plug 'nvim-tree/nvim-web-devicons' " OPTIONAL: for file icons
 Plug 'lewis6991/gitsigns.nvim' " OPTIONAL: for git status
 Plug 'romgrk/barbar.nvim'
 
+" Telescope
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.8' }
+
 
 call plug#end()
+
+
+" ===========================================================
+" Settings | vim-plug: telescope
+" ===========================================================
+" Find files using Telescope command-line sugar.
+nnoremap <leader>ff <cmd>Telescope find_files<cr>
+nnoremap <leader>fg <cmd>Telescope live_grep<cr>
+nnoremap <leader>fb <cmd>Telescope buffers<cr>
+nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 
 
 " ===========================================================
@@ -58,6 +72,19 @@ nnoremap <silent>    <A-.> <Cmd>BufferNext<CR>
 " Settings | vim-plug: NERDTree
 " ===========================================================
 nnoremap <C-t> :NERDTreeToggle<CR>
+
+" Exit Vim if NERDTree is the only window remaining in the only tab.
+autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | call feedkeys(":quit\<CR>:\<BS>") | endif
+
+" Close the tab if NERDTree is the only window remaining in it.
+autocmd BufEnter * if winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | call feedkeys(":quit\<CR>:\<BS>") | endif
+
+
+" ===========================================================
+" Settings | NVIM Overrides
+" ===========================================================
+nnoremap gt :BufferNext<CR>
+nnoremap gT :BufferPrevious<CR>
 
 
 " ===========================================================
