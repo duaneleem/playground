@@ -1,0 +1,188 @@
+<!-- Insert shortcode here -->
+
+<style>
+  body {
+    background-color: #091215;
+    color: white;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  #outputMessage {
+    width: 100%;
+    max-width: 500px;
+  }
+  
+  .loading-text {
+    margin-top: 20px;
+    font-size: 16px;
+    /** color: #e0e0e0; **/
+  }
+  
+  .url-display {
+    margin-top: 20px;
+    word-break: break-all;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 10px;
+    border-radius: 4px;
+    font-family: monospace;
+    color: #4caf50;
+  }
+  
+  .error-message {
+    color: #f44336;
+    text-align: center;
+  }
+</style>
+
+<div id="outputMessage">
+  <div style="text-align: center; margin: 40px auto;">
+    <img src="https://media.warriortrading.com/2020/10/27000845/wt-logo-2020-horiz-321x36.png" alt="Warrior Trading Logo" style="max-width: 500px;">
+    <p class="loading-text" style="color: #ffffff;">⌛ Please Wait While We Generate Your Access...</p>
+  </div>
+</div>
+
+<script>
+  // Configuration
+  const storageKey = "chatroom-700001";
+  const maxWaitTime = 10000; // Maximum wait time in milliseconds (10 seconds)
+  let lastToken = null; // Track the last processed token
+  let hasProcessed = false; // Track if the processing has been done
+  let elapsedTime = 0; // Track the elapsed time
+
+  // Function to handle retry
+  function handleRetry() {
+    // Reset the process
+    hasProcessed = false;
+    elapsedTime = 0;
+    lastToken = null;
+    
+    // Reset the UI
+    document.getElementById("outputMessage").innerHTML = `
+      <div style="text-align: center; margin: 40px auto;">
+        <img src="https://media.warriortrading.com/2020/10/27000845/wt-logo-2020-horiz-321x36.png" alt="Warrior Trading Logo" style="max-width: 500px;">
+        <p class="loading-text" style="color: #ffffff;">⌛ Please Wait While We Generate Your Access...</p>
+      </div>
+    `;
+    
+    // Start the process again
+    setTimeout(waitForStorageChange, 1000);
+  }
+
+  // Function to process the localStorage key
+  function processStorage() {
+    const storageValue = localStorage.getItem(storageKey);
+
+    if (storageValue) {
+      try {
+        // Parse JSON data
+        const jsonData = JSON.parse(storageValue);
+        const token = jsonData.token;
+
+        // Check if the token has changed
+        if (token === lastToken) {
+          return; // Skip processing if token hasn't changed
+        }
+
+        // Update the last processed token
+        lastToken = token;
+
+        // Construct URL to display
+        const generatedUrl = `/dashboard/`;
+
+        // Update the outputMessage to display the URL instead of redirecting
+        document.getElementById("outputMessage").innerHTML = `
+          <div style="text-align: center; margin: 40px auto;">
+            <img src="https://media.warriortrading.com/2020/10/27000845/wt-logo-2020-horiz-321x36.png" alt="Warrior Trading Logo" style="max-width: 500px;">
+            <p style="margin-top: 20px; font-size: 16px; color: #ffffff;">✅ Access Generated Successfully</p>
+            <p style="color: #ffffff;">Your access URL:</p>
+            <div class="url-display"><a style="color: #ffffff;" href="${generatedUrl}">${generatedUrl}</a></div>
+            <p style="margin-top: 15px; color: #ffffff;">Click the URL to access the platform</p>
+          </div>
+        `;
+
+        // Mark processing as complete
+        hasProcessed = true;
+        console.log("Token processed successfully");
+
+      } catch (error) {
+        console.error("Error processing token:", error);
+        // Display error message with retry option
+        document.getElementById("outputMessage").innerHTML = `
+          <div style="text-align: center; margin: 40px auto;">
+            <img src="https://media.warriortrading.com/2020/10/27000845/wt-logo-2020-horiz-321x36.png" alt="Warrior Trading Logo" style="max-width: 500px;">
+            <p class="error-message">There seems to be a problem generating your access.</p>
+            <button onclick="handleRetry()" style="margin-top: 15px; padding: 8px 16px; background-color: #1976D2; color: white; border: none; border-radius: 4px; cursor: pointer;">Click Here to try again</button>
+          </div>
+        `;
+        hasProcessed = true;
+      }
+    } else if (elapsedTime >= maxWaitTime) {
+      console.log("Max wait time exceeded");
+      // Max wait time exceeded, show retry option
+      document.getElementById("outputMessage").innerHTML = `
+        <div style="text-align: center; margin: 40px auto;">
+          <img src="https://media.warriortrading.com/2020/10/27000845/wt-logo-2020-horiz-321x36.png" alt="Warrior Trading Logo" style="max-width: 500px;">
+          <p class="error-message">There seems to be a problem generating your access.</p>
+          <button onclick="handleRetry()" style="margin-top: 15px; padding: 8px 16px; background-color: #1976D2; color: white; border: none; border-radius: 4px; cursor: pointer;">Click Here to try again</button>
+        </div>
+      `;
+    }
+  }
+
+  // Function to wait for the localStorage key to be created or updated
+  function waitForStorageChange() {
+    if (hasProcessed) {
+      return; // Stop checking if processing is complete
+    }
+
+    elapsedTime += 1000; // Increment elapsed time
+    console.log("Checking for token, elapsed time:", elapsedTime);
+
+    const storageValue = localStorage.getItem(storageKey);
+
+    if (storageValue) {
+      console.log("Token found in localStorage");
+      // Key is present or updated, process it
+      processStorage();
+    } else if (elapsedTime < maxWaitTime) {
+      // Key not present yet, wait and retry
+      setTimeout(waitForStorageChange, 1000);
+    } else {
+      console.log("Max wait time exceeded in waitForStorageChange");
+      // Max wait time exceeded, show retry option
+      document.getElementById("outputMessage").innerHTML = `
+        <div style="text-align: center; margin: 40px auto;">
+          <img src="https://media.warriortrading.com/2020/10/27000845/wt-logo-2020-horiz-321x36.png" alt="Warrior Trading Logo" style="max-width: 500px;">
+          <p class="error-message">There seems to be a problem generating your access.</p>
+          <button onclick="handleRetry()" style="margin-top: 15px; padding: 8px 16px; background-color: #1976D2; color: white; border: none; border-radius: 4px; cursor: pointer;">Click Here to try again</button>
+        </div>
+      `;
+    }
+  }
+
+  // Start the process immediately and also check after a delay
+  // First, try to process any existing token immediately
+  console.log("Checking for existing token on page load");
+  processStorage();
+
+  // Add a listener for storage changes across tabs/windows
+  window.addEventListener("storage", (event) => {
+    console.log("Storage event detected for key:", event.key);
+    if (event.key === storageKey) {
+      // Key is updated, process it
+      processStorage();
+    }
+  });
+
+  // If no token was found immediately, start the delayed checking process
+  if (!hasProcessed) {
+    console.log("No token found immediately, starting delayed checks");
+    setTimeout(waitForStorageChange, 1000);
+  }
+</script>
