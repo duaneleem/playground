@@ -1,12 +1,19 @@
-<!-- Insert shortcode here -->
+<!-- 
+  /route/?troubleshooting=true&forceError=true
+  - troubleshooting: true - display success message without redirecting
+  - forceError: true - show error immediately and return
+-->
 
 <style>
   body {
-    background-color: #091215;
-    color: white;
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
+  }
+  
+  #contentWrapper {
+    background-color: #091215;
+    color: white;
     height: 100vh;
     display: flex;
     justify-content: center;
@@ -40,10 +47,12 @@
   }
 </style>
 
-<div id="outputMessage">
-  <div style="text-align: center; margin: 40px auto;">
-    <img src="https://media.warriortrading.com/2020/10/27000845/wt-logo-2020-horiz-321x36.png" alt="Warrior Trading Logo" style="max-width: 500px;">
-    <p class="loading-text" style="color: #ffffff;">⌛ Please Wait While We Generate Your Access...</p>
+<div id="contentWrapper">
+  <div id="outputMessage">
+    <div style="text-align: center; margin: 40px auto;">
+      <img src="https://media.warriortrading.com/2020/10/27000845/wt-logo-2020-horiz-321x36.png" alt="Warrior Trading Logo" style="max-width: 500px;">
+      <p class="loading-text" style="color: #ffffff;">⌛ Please Wait While We Generate Your Access...</p>
+    </div>
   </div>
 </div>
 
@@ -54,9 +63,22 @@
   let lastToken = null; // Track the last processed token
   let hasProcessed = false; // Track if the processing has been done
   let elapsedTime = 0; // Track the elapsed time
+  let timeoutId = null; // Track the timeout ID
+
+  // Check for force error parameter
+  const urlParams = new URLSearchParams(window.location.search);
+  const forceError = urlParams.get('forceError') === 'true';
+
+  // Check for troubleshooting parameter
+  const troubleshooting = urlParams.get('troubleshooting') === 'true';
 
   // Function to handle retry
   function handleRetry() {
+    // Clear any existing timeout
+    if (timeoutId) {
+      clearTimeout(timeoutId);
+    }
+    
     // Reset the process
     hasProcessed = false;
     elapsedTime = 0;
@@ -74,8 +96,25 @@
     setTimeout(waitForStorageChange, 1000);
   }
 
+  // Function to show timeout error
+  function showTimeoutError() {
+    document.getElementById("outputMessage").innerHTML = `
+      <div style="text-align: center; margin: 40px auto;">
+        <img src="https://media.warriortrading.com/2020/10/27000845/wt-logo-2020-horiz-321x36.png" alt="Warrior Trading Logo" style="max-width: 500px;">
+        <p class="error-message">There seems to be a problem reading the hidden button state.</p>
+        <button onclick="handleRetry()" style="margin-top: 15px; padding: 8px 16px; background-color: #1976D2; color: white; border: none; border-radius: 4px; cursor: pointer;">Click Here to try again</button>
+      </div>
+    `;
+  }
+
   // Function to process the localStorage key
   function processStorage() {
+    if (forceError) {
+      // If forceError is true, show the error immediately and return
+      showTimeoutError();
+      return;
+    }
+
     const storageValue = localStorage.getItem(storageKey);
 
     if (storageValue) {
@@ -95,16 +134,31 @@
         // Construct URL to display
         const generatedUrl = `/dashboard/`;
 
-        // Update the outputMessage to display the URL instead of redirecting
-        document.getElementById("outputMessage").innerHTML = `
-          <div style="text-align: center; margin: 40px auto;">
-            <img src="https://media.warriortrading.com/2020/10/27000845/wt-logo-2020-horiz-321x36.png" alt="Warrior Trading Logo" style="max-width: 500px;">
-            <p style="margin-top: 20px; font-size: 16px; color: #ffffff;">✅ Access Generated Successfully</p>
-            <p style="color: #ffffff;">Your access URL:</p>
-            <div class="url-display"><a style="color: #ffffff;" href="${generatedUrl}">${generatedUrl}</a></div>
-            <p style="margin-top: 15px; color: #ffffff;">Click the URL to access the platform</p>
-          </div>
-        `;
+        if (troubleshooting) {
+          // Display the success message without redirecting
+          document.getElementById("outputMessage").innerHTML = `
+            <div style="text-align: center; margin: 40px auto;">
+              <img src="https://media.warriortrading.com/2020/10/27000845/wt-logo-2020-horiz-321x36.png" alt="Warrior Trading Logo" style="max-width: 500px;">
+              <p style="margin-top: 20px; font-size: 16px; color: #ffffff;">✅ Access Generated Successfully</p>
+              <p style="color: #ffffff;">Your access URL:</p>
+              <div class="url-display"><a style="color: #ffffff;" href="${generatedUrl}">${generatedUrl}</a></div>
+              <p style="margin-top: 15px; color: #ffffff;">Click the URL to access the platform</p>
+            </div>
+          `;
+        } else {
+          // Display the success message with redirection note
+          document.getElementById("outputMessage").innerHTML = `
+            <div style="text-align: center; margin: 40px auto;">
+              <img src="https://media.warriortrading.com/2020/10/27000845/wt-logo-2020-horiz-321x36.png" alt="Warrior Trading Logo" style="max-width: 500px;">
+              <p style="margin-top: 20px; font-size: 16px; color: #ffffff;">✅ Access Generated Successfully!</p>
+              <p style="color: #ffffff;">Please wait while we forward you to the Dashboard...</p>
+            </div>
+          `;
+          // Redirect to the dashboard after 5 seconds
+          setTimeout(() => {
+            window.location.href = generatedUrl;
+          }, 5000);
+        }
 
         // Mark processing as complete
         hasProcessed = true;
@@ -175,6 +229,10 @@
   window.addEventListener("storage", (event) => {
     console.log("Storage event detected for key:", event.key);
     if (event.key === storageKey) {
+      // Clear any existing timeout
+      if (timeoutId) {
+        clearTimeout(timeoutId);
+      }
       // Key is updated, process it
       processStorage();
     }
@@ -183,6 +241,13 @@
   // If no token was found immediately, start the delayed checking process
   if (!hasProcessed) {
     console.log("No token found immediately, starting delayed checks");
-    setTimeout(waitForStorageChange, 1000);
+    if (forceError) {
+      // Show error immediately if forceError parameter is present
+      showTimeoutError();
+    } else {
+      // Set a timeout to show error if no response within 10 seconds
+      timeoutId = setTimeout(showTimeoutError, maxWaitTime);
+      setTimeout(waitForStorageChange, 1000);
+    }
   }
 </script>
