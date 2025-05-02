@@ -1,0 +1,115 @@
+<div id="output">⌛ Please Wait While We Generate Your Access</div>
+
+<script>
+  // Configuration
+  const storageKey = "chatroom-700001";
+  const specialCategories = [
+    "Admin or Testing Access (QS)",
+    "WT377 (QS)"
+  ];
+  const maxWaitTime = 10000; // Maximum wait time in milliseconds (10 seconds)
+  let lastToken = null; // Track the last processed token
+  let hasProcessed = false; // Track if the processing has been done
+  let elapsedTime = 0; // Track the elapsed time
+
+  // Function to generate the default launcher HTML
+  function getDefaultLauncher(token = "default") {
+    return `<div><a class="btn btn-primary" style="color: #FFF;" href="https://chatroom.warriortrading.com/sso/?data=${token}">Click here to Enter the Platform</a></div>`;
+  }
+
+  // Function to process the localStorage key
+  function processStorage() {
+    const storageValue = localStorage.getItem(storageKey);
+
+    if (storageValue) {
+      try {
+        // Parse JSON data
+        const jsonData = JSON.parse(storageValue);
+        const token = jsonData.token;
+
+        // Check if the token has changed
+        if (token === lastToken) {
+          return; // Skip processing if token hasn't changed
+        }
+
+        // Update the last processed token
+        lastToken = token;
+
+        // Decode JWT payload
+        const base64Payload = token.split('.')[1];
+        const decodedPayload = JSON.parse(atob(base64Payload));
+
+        const subscriptions = decodedPayload.subscriptions || [];
+
+        // Aggregate and deduplicate product categories
+        const allProductCategories = Array.from(new Set(
+          subscriptions.flatMap(sub => sub.product_categories || [])
+        ));
+
+        // Check for special categories
+        const hasSpecialCategory = allProductCategories.some(category =>
+          specialCategories.includes(category)
+        );
+
+        // Result HTML
+        const resultHTML = hasSpecialCategory
+          ? `<div><a class="btn btn-primary" style="color: #FFF;" href="https://chatroom.warriortrading.com/beta/sso/?data=${token}">Click here to Enter Live Platform</a></div>`
+          : getDefaultLauncher(token);
+
+        // Replace "Please Wait" message with result
+        document.getElementById("output").innerHTML = resultHTML;
+
+        // Mark processing as complete
+        hasProcessed = true;
+
+      } catch (error) {
+        // Display default launcher in case of an error
+        document.getElementById("output").innerHTML = getDefaultLauncher();
+        hasProcessed = true;
+      }
+    } else if (elapsedTime >= maxWaitTime) {
+      // Max wait time exceeded, show fallback
+      document.getElementById("output").innerHTML = `<p>Unable to generate access. Please try again later.</p>`;
+    }
+  }
+
+  // Function to start processing after a delay
+  function delayedStart() {
+    setTimeout(() => {
+      waitForStorageChange();
+    }, 5000); // Wait for 5 seconds before running
+  }
+
+  // Function to wait for the localStorage key to be created or updated
+  function waitForStorageChange() {
+    if (hasProcessed) {
+      return; // Stop checking if processing is complete
+    }
+
+    elapsedTime += 1000; // Increment elapsed time
+
+    const storageValue = localStorage.getItem(storageKey);
+
+    if (storageValue) {
+      // Key is present or updated, process it
+      processStorage();
+    } else if (elapsedTime < maxWaitTime) {
+      // Key not present yet, wait and retry
+      setTimeout(waitForStorageChange, 1000);
+    } else {
+      // Max wait time exceeded, show fallback
+      document.getElementById("output").innerHTML = `<p>Unable to generate access. Please try again later.</p>`;
+    }
+  }
+
+  // Add a listener for storage changes across tabs/windows
+  window.addEventListener("storage", (event) => {
+    if (event.key === storageKey) {
+      // Key is updated, process it
+      processStorage();
+    }
+  });
+
+  // Start the process with a delay
+  delayedStart();
+</script>

@@ -24,8 +24,11 @@ services:
     environment:
       PMA_ARBITRARY: 1
       UPLOAD_LIMIT: 4G
-    # volumes:
-    # - './artifacts/0-upload_large_dumps.ini:/usr/local/etc/php/conf.d/0-upload_large_dumps.ini'
+    #resources:
+    #  limits:
+    #    memory: 4g
+    volumes:
+      - './artifacts/0-upload_large_dumps.ini:/usr/local/etc/php/conf.d/0-upload_large_dumps.ini'
 
   pneuma-adminer:
     image: adminer
